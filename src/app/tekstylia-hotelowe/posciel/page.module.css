@@ -1,0 +1,1082 @@
+/* Bedding Page Styles - Slack-Like Aesthetics */
+
+/* Variables Map */
+.main {
+    --brand-blue: #004b87;
+    /* Ecolab Blue */
+    --brand-blue-dark: #00305e;
+    --brand-teal: #6dc7b8;
+    --text-primary: #1d1c1d;
+    --text-secondary: #616061;
+    --text-white: #ffffff;
+    --bg-page: #ffffff;
+    --bg-surface: #f4ede4;
+    /* Slack-ish beige/gray tone for contrast */
+    --bg-card: #ffffff;
+    --radius-card: 12px;
+    --radius-btn: 8px;
+    /* Slightly rounded, not full pill unless primary */
+    --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    font-family: var(--font-ibm);
+    /* Ensure IBM Plex Sans */
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Typography Overrides */
+.main h1,
+.main h2,
+.main h3,
+.main h4 {
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
+
+/* Force white in dark sections by being more specific than the rule above */
+.main .heroSection h1,
+.main .heroSection h2,
+.main .heroSection h3,
+.main .heroSection p,
+.main .heroSection span,
+.main .productCtaSection h1,
+.main .productCtaSection h2,
+.main .productCtaSection p,
+.main .productCtaSection span {
+    color: #ffffff !important;
+}
+
+/* Hero Section */
+.heroSection {
+    padding: 5rem 0 4rem;
+    background: linear-gradient(135deg, #001e40 0%, #004b87 50%, #002d5c 100%);
+    color: white !important;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+}
+
+.heroContent {
+    max-width: 600px;
+    z-index: 2;
+    position: relative;
+    text-align: left;
+}
+
+.heroGrid {
+    display: grid;
+    gap: 3rem;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .heroGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+}
+
+.heroTitle,
+.main .heroSection .heroTitle {
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.1;
+    margin: 0 0 1.5rem;
+    color: #ffffff !important;
+}
+
+.heroSubtitle {
+    display: block;
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.95) !important;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    font-weight: 400;
+    max-width: none;
+}
+
+.highlight {
+    color: #6dc7b8;
+}
+
+.highlight::after {
+    display: none;
+}
+
+.heroButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    justify-content: flex-start;
+}
+
+.btnPrimary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: white;
+    color: #004b87;
+    font-size: 1rem;
+    font-weight: 300;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.btnPrimary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    background: #f8fafc;
+}
+
+.btnSecondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btnSecondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
+}
+
+.trustPoints {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    justify-content: flex-start;
+}
+
+.point {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: white !important;
+    /* Force white for sub-points */
+    font-weight: 300;
+}
+
+.point svg {
+    color: #6dc7b8;
+}
+
+/* Hero Visual */
+.heroVisual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroImageWrapper {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    border: 8px solid rgba(255, 255, 255, 0.1);
+}
+
+.floatingCard {
+    position: absolute;
+    bottom: 40px;
+    left: -40px;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 260px;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Calculator Section - The "Not Working" Fix */
+.calculatorSection {
+    padding: 6rem 0;
+    background: white;
+}
+
+.calculatorGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: stretch;
+}
+
+.calculatorForm {
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.calcTitle {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.calcTitle svg {
+    color: var(--brand-blue);
+    padding: 8px;
+    background: #eef5ff;
+    border-radius: 12px;
+}
+
+.calcDesc {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+}
+
+.inputGroup {
+    margin-bottom: 2.5rem;
+}
+
+.inputGroup label {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+}
+
+/* Custom Range Slider */
+.rangeInput {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    outline: none;
+    transition: background 0.15s ease-in-out;
+}
+
+.rangeInput::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 28px;
+    height: 28px;
+    background: var(--brand-blue);
+    border: 4px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s ease;
+}
+
+.rangeInput::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+}
+
+/* Result Card - Floating Visual */
+.calculatorResults {
+    position: relative;
+}
+
+.resultCard {
+    background: var(--brand-blue);
+    color: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 75, 135, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decoration circle */
+.resultCard::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+}
+
+.resultCard h3 {
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 2.5rem;
+}
+
+.savingHighlight {
+    background: white;
+    color: var(--brand-blue);
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.savingHighlight span {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 0.25rem;
+}
+
+.savingHighlight strong {
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+.comparisonRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 1.125rem;
+}
+
+.comparisonRow:last-of-type {
+    border: none;
+}
+
+.strike {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.btnPrimaryFull {
+    width: 100%;
+    margin-top: 1rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    background: #6dc7b8;
+    /* Teal CTA on Blue Card */
+    color: #00305e;
+    /* Dark text for contrast */
+    padding: 1.25rem;
+    border-radius: 12px;
+    font-weight: 300;
+    font-size: 1.125rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btnPrimaryFull:hover {
+    background: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Sections Common */
+.sectionHeader {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.sectionLabel {
+    display: block;
+    color: var(--brand-blue);
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 0.8125rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+.sectionDesc {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Size Guide & Tables */
+.sizeGuideSection,
+.comparisonSection {
+    padding: 6rem 0;
+    background: #f9f9f9;
+}
+
+.sizeTable,
+.comparisonTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+}
+
+.sizeTable th,
+.comparisonTable th {
+    background: white;
+    /* Clean header */
+    color: var(--text-primary);
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 0.8125rem;
+    padding: 1.5rem;
+    border-bottom: 2px solid #f0f0f0;
+    text-align: left;
+}
+
+.sizeTable td,
+.comparisonTable td {
+    padding: 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.sizeTable tr:last-child td,
+.comparisonTable tr:last-child td {
+    border-bottom: none;
+}
+
+.sizeTable tr:hover td,
+.comparisonTable tr:hover td {
+    background: #fcfcfc;
+}
+
+/* Material Comp Cards */
+.recommendations {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.recCard {
+    background: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    box-shadow: var(--shadow-card);
+    transition: transform 0.2s;
+}
+
+.recCard:hover {
+    transform: translateY(-5px);
+    border-color: var(--brand-blue);
+}
+
+.recCard h3 {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.recCard p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.recCard span {
+    display: inline-block;
+    background: #eef5ff;
+    color: var(--brand-blue);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 300;
+}
+
+/* Rent Vs Buy - Business Logic */
+.rvbSection {
+    padding: 6rem 0;
+    background: white;
+}
+
+.rvbGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.rvbColumn {
+    padding: 3rem;
+    border-radius: 20px;
+    background: white;
+    border: 1px solid #e0e0e0;
+}
+
+.rvbColumn:first-child {
+    background: #f0fdf4;
+    /* Light green tint */
+    border-color: #dcfce7;
+}
+
+.buyColumn {
+    background: #fef2f2;
+    /* Light red tint */
+    border-color: #fee2e2;
+}
+
+.colTitle {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.costHighlight {
+    text-align: center;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-card);
+}
+
+.featureList li {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Product Collections */
+.collectionsSection {
+    padding: 6rem 0;
+    background: #f9f9f9;
+}
+
+.collectionsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.collectionCard {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.collectionCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    border-color: #e0e0e0;
+}
+
+.placeholderImage {
+    height: 220px;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    font-weight: 300;
+}
+
+.cardContent {
+    padding: 1.5rem;
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.cardSubtitle {
+    color: var(--brand-blue);
+    font-size: 0.8125rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.cardSpecs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.cardPrice {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+}
+
+.cardLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 300;
+    color: var(--brand-blue);
+}
+
+/* Technical Specs */
+.specsSection {
+    padding: 6rem 0;
+    background: white;
+}
+
+.specsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.specBox {
+    padding: 2rem;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+}
+
+.specBox h3 {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--brand-teal);
+    display: inline-block;
+}
+
+/* Case Study */
+.caseStudySection {
+    background-color: var(--brand-blue);
+    color: white;
+    padding: 6rem 0;
+}
+
+.caseStudyContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.caseStudyTitle {
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.csBlock h4 {
+    color: var(--brand-teal);
+    margin-bottom: 0.5rem;
+}
+
+.csBlock p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.125rem;
+}
+
+.resultsGrid {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.resultItem strong {
+    color: var(--brand-teal);
+}
+
+.resultItem span {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.quote {
+    color: white;
+    font-weight: 300;
+    border-left-color: var(--brand-teal);
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+.btnWhite {
+    background: white;
+    color: var(--brand-blue);
+    padding: 1rem 2rem;
+    font-family: var(--font-ibm);
+    font-weight: 300;
+    border-radius: var(--radius-btn);
+    border: none;
+    cursor: pointer;
+    font-size: 1.125rem;
+}
+
+/* Certs */
+.certSection {
+    padding: 4rem 0;
+    background: #f9f9f9;
+}
+
+.certCard {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-card);
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+.certIcon {
+    margin-bottom: 1.5rem;
+    color: var(--brand-blue);
+}
+
+/* FAQ */
+.faqSection {
+    padding: 6rem 0;
+    background: white;
+}
+
+.faqItem {
+    border: 1px solid #e0e0e0;
+    margin-bottom: 1rem;
+    box-shadow: none;
+    border-radius: 8px;
+}
+
+/* CTA Section */
+.ctaSection {
+    padding: 4rem 0 0 0;
+    margin-bottom: 0;
+}
+
+.ctaContent {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faqQuestion {
+    font-weight: 300;
+    font-size: 1.125rem;
+}
+
+/* Final CTA */
+.finalCtaSection {
+    background: var(--brand-blue);
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.ctaBox h2 {
+    color: white;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.btnOutline {
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    padding: 1rem 2rem;
+    border-radius: var(--radius-btn);
+    font-weight: 300;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.btnOutline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
+}
+
+/* Product CTA Section - Selpak Professional Style */
+.productCtaSection {
+    background: linear-gradient(135deg, #1a365d 0%, #2c5282 50%, #1e3a5f 100%);
+    padding: 5rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.productCtaSection::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(109, 199, 184, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.productCtaSection::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -5%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.productCtaContent {
+    position: relative;
+    z-index: 1;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.productCtaTitle,
+.productCtaSection h2 {
+    font-size: 2.75rem;
+    font-weight: 300;
+    color: #ffffff !important;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+}
+
+.productCtaDesc {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.productCtaButtons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btnCtaPrimary {
+    background: white;
+    color: #1a365d;
+    padding: 1rem 2.5rem;
+    border-radius: 6px;
+    font-weight: 300;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid white;
+    min-width: 180px;
+}
+
+.btnCtaPrimary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: #f8fafc;
+}
+
+.btnCtaSecondary {
+    background: transparent;
+    color: white;
+    padding: 1rem 2.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 6px;
+    font-weight: 300;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    min-width: 180px;
+}
+
+.btnCtaSecondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
+}
+
+@media (max-width: 768px) {
+    .productCtaTitle {
+        font-size: 2rem;
+    }
+
+    .productCtaDesc {
+        font-size: 1rem;
+    }
+
+    .productCtaButtons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btnCtaPrimary,
+    .btnCtaSecondary {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+
+    .calculatorGrid,
+    .caseStudyContent {
+        grid-template-columns: 1fr;
+    }
+
+    .heroGrid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .heroContent,
+    .heroButtons,
+    .trustPoints {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+/* Towels Specs Specifics */
+.towelsSpecsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (max-width: 1024px) {
+    .towelsSpecsGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.specsContent {
+    padding-right: 2rem;
+}
+
+.specsList {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.specsList li {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.specIcon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    background: #eef5ff;
+    color: var(--brand-blue);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.specsList strong {
+    display: block;
+    font-size: 1.125rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.specsList p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.specsVisual {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    min-height: 500px;
+}

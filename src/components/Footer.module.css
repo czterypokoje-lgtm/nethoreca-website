@@ -1,0 +1,421 @@
+/* Footer Styles - Ecolab-Inspired Design (Exact Match) */
+
+/* TEAL Color for Headers/Buttons -> #6dc7b8 */
+/* BLUE Color for Footer/Email -> #004b87 to #00305e */
+
+/* Floating Contact Buttons - Right Side TABS */
+.floatingButtons {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    /* Slight gap between tabs */
+}
+
+.floatingBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    /* Square proportions */
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: white;
+    font-size: 0.625rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    gap: 4px;
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.floatingBtn:hover {
+    width: 70px;
+    /* Slide out effect */
+}
+
+/* Call Button - Teal Green */
+.callBtn {
+    background-color: #6dc7b8;
+    /* Teal */
+    border-radius: 8px 0 0 8px;
+    /* Tab shape */
+}
+
+.callBtn:hover {
+    background-color: #5bb5a6;
+}
+
+/* Email Button - Blue */
+.emailBtn {
+    background-color: #004b87;
+    /* Ecolab Blue */
+    border-radius: 8px 0 0 8px;
+    /* Tab shape */
+}
+
+.emailBtn:hover {
+    background-color: #003d70;
+}
+
+/* Contact Panel Slide-out */
+.contactPanel {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 400px;
+    max-width: 90vw;
+    background: white;
+    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.25);
+    z-index: 1001;
+    animation: slideIn 0.3s ease-out;
+    border-radius: 8px 0 0 8px;
+    overflow: hidden;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50%) translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
+}
+
+/* Panel Header - TEAL Background */
+.panelHeader {
+    background-color: #6dc7b8;
+    padding: 24px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.panelHeader h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #1f2937;
+    /* Dark text on teal */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.closePanel {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1f2937;
+    transition: opacity 0.2s ease;
+    padding: 0;
+    display: flex;
+}
+
+.closePanel:hover {
+    opacity: 0.7;
+}
+
+.panelContent {
+    padding: 32px;
+    color: #4b5563;
+}
+
+.panelContent p {
+    margin-bottom: 12px;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+}
+
+.panelContent strong {
+    color: #1f2937;
+}
+
+.phoneNumbers {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.phoneLink {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #004b87;
+    font-weight: 300;
+    text-decoration: none;
+    font-size: 1.125rem;
+    transition: color 0.2s ease;
+}
+
+.phoneLink:hover {
+    color: #00305e;
+    text-decoration: underline;
+}
+
+.emailLink {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #004b87;
+    font-weight: 300;
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 20px 0;
+    transition: color 0.2s ease;
+}
+
+.emailLink:hover {
+    color: #00305e;
+    text-decoration: underline;
+}
+
+.hours,
+.responseTime {
+    font-size: 0.8125rem;
+    color: #6b7280;
+    margin-top: 16px;
+}
+
+.panelCta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #004b87;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 20px;
+    font-weight: 300;
+    font-size: 0.875rem;
+    text-decoration: none;
+    margin-top: 16px;
+    transition: background 0.2s ease;
+}
+
+.panelCta:hover {
+    background: #00305e;
+    text-decoration: none;
+    color: white;
+}
+
+/* Blue Description Banner - Matches Footer Top */
+.descriptionBanner {
+    background-color: #004b87;
+    color: white;
+    padding: 64px 0;
+    text-align: center;
+}
+
+.bannerText {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    max-width: 900px;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+}
+
+/* Main Footer - Deep Blue Gradient */
+.footer {
+    background: linear-gradient(to bottom, #004b87 0%, #00305e 100%);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 64px 0 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footerContent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 32px;
+    margin-bottom: 48px;
+}
+
+.footerSection h4 {
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 24px;
+    text-transform: none;
+}
+
+.footerLinks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footerLinks li {
+    margin-bottom: 12px;
+}
+
+.footerLinks a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.875rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.2s ease;
+}
+
+.footerLinks a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/* Arrows only on hover */
+.footerLinks a svg {
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: all 0.2s ease;
+}
+
+.footerLinks a:hover svg {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.contactDetails {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.contactDetails p {
+    margin-bottom: 4px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contactDetails a {
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    transition: color 0.2s ease;
+}
+
+.contactDetails a:hover {
+    color: #6dc7b8;
+}
+
+/* Footer Bottom */
+.footerBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8125rem;
+}
+
+.footerLogo {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.logoText {
+    color: white;
+    font-weight: 400;
+}
+
+.logoText span {
+    color: #6dc7b8;
+    font-weight: 300;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .footerContent {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .floatingButtons {
+        bottom: 20px;
+        top: auto;
+        right: 20px;
+        transform: none;
+        flex-direction: column;
+    }
+
+    .floatingBtn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        padding: 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .floatingBtn span {
+        display: none;
+    }
+
+    .callBtn {
+        border-radius: 50%;
+        margin-bottom: 12px;
+    }
+
+    .emailBtn {
+        border-radius: 50%;
+    }
+
+    .contactPanel {
+        width: 100%;
+        max-width: 100%;
+        bottom: 0;
+        top: auto;
+        transform: none;
+        border-radius: 16px 16px 0 0;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .descriptionBanner {
+        padding: 48px 24px;
+    }
+
+    .footerContent {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .footerBottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footerContent {
+        grid-template-columns: 1fr;
+    }
+}

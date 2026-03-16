@@ -1,0 +1,463 @@
+/* Contact Page - Professional Cloudbeds Style with E-E-A-T */
+
+.main {
+    background-color: #ffffff;
+    font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ==================== BADGE ==================== */
+.badge {
+    display: inline-block;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 300;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* ==================== HERO ==================== */
+.hero {
+    padding: 120px 0 80px;
+    background: #111827;
+    text-align: center;
+}
+
+.heroContent {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.heroTitle {
+    font-size: 52px;
+    font-weight: 300;
+    line-height: 1.1;
+    color: #ffffff;
+    margin-bottom: 24px;
+    letter-spacing: -0.03em;
+}
+
+.highlight {
+    color: #60a5fa;
+}
+
+.heroText {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #9ca3af;
+}
+
+/* ==================== TRUST BAR ==================== */
+.trustBar {
+    background: #0066cc;
+    padding: 24px 0;
+}
+
+.trustGrid {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+.trustItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* ==================== CONTACT SECTION ==================== */
+.contactSection {
+    padding: 80px 0;
+}
+
+.contactGrid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+/* ==================== FORM CARD ==================== */
+.formCard {
+    background: #ffffff;
+    padding: 48px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.formTitle {
+    font-size: 28px;
+    font-weight: 300;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.formSubtitle {
+    font-size: 16px;
+    color: #6b7280;
+    margin-bottom: 32px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.formGroup label {
+    font-size: 14px;
+    font-weight: 300;
+    color: #374151;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+    padding: 14px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: all 0.2s;
+    background: #ffffff;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+    color: #9ca3af;
+}
+
+.submitBtn {
+    padding: 16px 32px;
+    background: #0066cc;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 300;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+
+.submitBtn:hover {
+    background: #0052a3;
+    transform: translateY(-1px);
+}
+
+.privacyNote {
+    font-size: 13px;
+    color: #9ca3af;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.privacyNote a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.privacyNote a:hover {
+    text-decoration: underline;
+}
+
+/* ==================== INFO COLUMN ==================== */
+.infoColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.infoCard {
+    background: #f9fafb;
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+}
+
+.infoCard h3 {
+    font-size: 20px;
+    font-weight: 300;
+    color: #111827;
+    margin-bottom: 24px;
+}
+
+.infoItem {
+    display: flex;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.infoItem:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.infoIcon {
+    width: 48px;
+    height: 48px;
+    background: #0066cc;
+    color: #ffffff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.infoContent {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.infoContent strong {
+    font-size: 14px;
+    font-weight: 300;
+    color: #111827;
+}
+
+.infoContent a,
+.infoContent span {
+    font-size: 15px;
+    color: #4b5563;
+    text-decoration: none;
+}
+
+.infoContent a:hover {
+    color: #0066cc;
+}
+
+/* ==================== TRUST CARD ==================== */
+.trustCard {
+    background: #111827;
+    padding: 32px;
+    border-radius: 16px;
+    color: #ffffff;
+}
+
+.trustCard h4 {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.trustList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.trustList li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.trustList li svg {
+    color: #22c55e;
+    flex-shrink: 0;
+}
+
+/* ==================== QUICK CTA ==================== */
+.quickCta {
+    background: linear-gradient(135deg, #fde047, #facc15);
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.quickCta p {
+    font-size: 15px;
+    color: #374151;
+    margin-bottom: 12px;
+}
+
+.ctaLink {
+    font-size: 16px;
+    font-weight: 300;
+    color: #111827;
+    text-decoration: none;
+}
+
+.ctaLink:hover {
+    text-decoration: underline;
+}
+
+/* ==================== MAP SECTION ==================== */
+.mapSection {
+    padding: 80px 0;
+    background: #f9fafb;
+    text-align: center;
+}
+
+.mapTitle {
+    font-size: 32px;
+    font-weight: 400;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.mapSubtitle {
+    font-size: 16px;
+    color: #6b7280;
+    margin-bottom: 32px;
+}
+
+.mapBox {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+}
+
+.mapPlaceholder {
+    background: #e5e7eb;
+    padding: 80px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    color: #6b7280;
+}
+
+.mapPlaceholder p {
+    font-size: 18px;
+    font-weight: 300;
+    color: #374151;
+}
+
+.mapLink {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #0066cc;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 300;
+    transition: all 0.2s;
+}
+
+.mapLink:hover {
+    background: #0052a3;
+}
+
+/* ==================== E-E-A-T SECTION ==================== */
+.eatSection {
+    padding: 60px 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+.eatGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.eatCard {
+    text-align: center;
+    padding: 24px;
+}
+
+.eatCard h4 {
+    font-size: 16px;
+    font-weight: 300;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.eatCard p {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1024px) {
+    .contactGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .eatGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .heroTitle {
+        font-size: 40px;
+    }
+
+    .formCard {
+        padding: 32px;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero {
+        padding: 80px 0 60px;
+    }
+
+    .heroTitle {
+        font-size: 32px;
+    }
+
+    .formRow {
+        grid-template-columns: 1fr;
+    }
+
+    .trustGrid {
+        gap: 16px;
+    }
+
+    .trustItem span {
+        display: none;
+    }
+
+    .eatGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .formCard {
+        padding: 24px;
+    }
+}

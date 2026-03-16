@@ -1,0 +1,483 @@
+/* Recycled Series Page Styles */
+.main {
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Hero Section */
+.hero {
+    padding: 4rem 0 5rem;
+    background: linear-gradient(135deg, #064e3b 0%, #065f46 50%, #047857 100%);
+    color: white;
+}
+
+.heroGrid {
+    display: grid;
+    gap: 3rem;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .heroGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.875rem;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb:hover {
+    color: white;
+}
+
+.ecoBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    color: #a7f3d0;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.heroTitle {
+    font-size: 2.75rem;
+    font-weight: 300;
+    line-height: 1.15;
+    margin: 0 0 1.5rem;
+}
+
+.highlight {
+    color: #a7f3d0;
+}
+
+.heroDescription {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 0 2rem;
+}
+
+.heroDescription strong {
+    color: #a7f3d0;
+}
+
+.heroButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.btnPrimary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    background: white;
+    color: #065f46;
+    font-size: 1rem;
+    font-weight: 300;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btnPrimary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25);
+}
+
+.btnSecondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btnSecondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Stats Ring */
+.statsRing {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.statItem {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.statValue {
+    display: block;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #a7f3d0;
+}
+
+.statLabel {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: white;
+    margin-top: 0.25rem;
+}
+
+.statSublabel {
+    display: block;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Section Header */
+.sectionHeader {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+
+.sectionHeader h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    color: #0f172a;
+    margin: 0 0 0.75rem;
+}
+
+.sectionHeader p {
+    font-size: 1.0625rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+/* Features Section */
+.featuresSection {
+    padding: 5rem 0;
+    background: white;
+}
+
+.featuresGrid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .featuresGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .featuresGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.featureCard {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: #f0fdf4;
+    border-radius: 1rem;
+    border: 1px solid #bbf7d0;
+}
+
+.featureIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: #065f46;
+    color: white;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.featureCard h3 {
+    font-size: 1.125rem;
+    font-weight: 300;
+    color: #065f46;
+    margin: 0 0 0.5rem;
+}
+
+.featureCard p {
+    font-size: 0.875rem;
+    color: #374151;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Products Section */
+.productsSection {
+    padding: 5rem 0;
+    background: #f8fafc;
+}
+
+.productsGrid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .productsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .productsGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.productCard {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.productCard:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+}
+
+.productBadge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    background: #065f46;
+    color: white;
+    font-size: 0.625rem;
+    font-weight: 300;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.productCard h3 {
+    font-size: 1.125rem;
+    font-weight: 300;
+    color: #0f172a;
+    margin: 0 0 0.5rem;
+    padding-right: 3rem;
+}
+
+.productCard>p {
+    font-size: 0.9375rem;
+    color: #6b7280;
+    margin: 0 0 1rem;
+    line-height: 1.5;
+}
+
+.productSpecs {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 1rem;
+}
+
+.productSpecs li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8125rem;
+    color: #374151;
+    padding: 0.375rem 0;
+}
+
+.productSpecs li svg {
+    color: #10b981;
+    flex-shrink: 0;
+}
+
+.productLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: #065f46;
+    text-decoration: none;
+}
+
+.productLink:hover {
+    text-decoration: underline;
+}
+
+/* Certification Section */
+.certSection {
+    padding: 5rem 0;
+    background: white;
+}
+
+.certGrid {
+    display: grid;
+    gap: 3rem;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .certGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.certContent h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    color: #0f172a;
+    margin: 0 0 1rem;
+}
+
+.certContent>p {
+    font-size: 1.0625rem;
+    color: #6b7280;
+    margin: 0 0 2rem;
+    line-height: 1.7;
+}
+
+.certList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.certList li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.certList li:last-child {
+    border-bottom: none;
+}
+
+.certList li svg {
+    color: #065f46;
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+}
+
+.certList li strong {
+    display: block;
+    font-size: 1rem;
+    color: #0f172a;
+}
+
+.certList li span {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.certVisual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.certBadge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+    border: 4px solid #065f46;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.certBadge svg {
+    color: #065f46;
+    margin-bottom: 0.5rem;
+}
+
+.certBadge span {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #065f46;
+    line-height: 1.2;
+}
+
+/* CTA Section */
+.ctaSection {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #064e3b 0%, #065f46 100%);
+}
+
+.ctaContent {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.ctaContent h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    color: white;
+    margin: 0 0 1rem;
+}
+
+.ctaContent p {
+    font-size: 1.0625rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 0 2rem;
+}
+
+.btnCta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: white;
+    color: #065f46;
+    font-size: 1.0625rem;
+    font-weight: 300;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btnCta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25);
+}

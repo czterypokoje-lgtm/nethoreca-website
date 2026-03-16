@@ -1,0 +1,179 @@
+/* Reference Section Component CSS */
+
+.section {
+    padding: 64px 0 80px;
+    background-color: #fef9e7;
+}
+
+@media (min-width: 768px) {
+    .section {
+        padding: 96px 0 112px;
+    }
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Header */
+.sectionHeader {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 48px;
+}
+
+@media (min-width: 768px) {
+    .sectionHeader {
+        margin-bottom: 64px;
+    }
+}
+
+.sectionLabel {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.sectionTitle {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--color-text-primary);
+    margin-bottom: 16px;
+}
+
+.highlight {
+    background: linear-gradient(180deg, transparent 55%, #ffd84d 55%);
+    padding: 0 4px;
+}
+
+.sectionDescription {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+    }
+}
+
+/* Card */
+.card {
+    background: white;
+    border: 1px solid var(--color-ui-03);
+    border-radius: 12px;
+    padding: 28px;
+    position: relative;
+    /* transition: transform 0.2s; */
+}
+
+/* .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+} */
+
+.savingsBadge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(36, 161, 72, 0.08);
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-align: right;
+}
+
+.savingsLabel {
+    display: block;
+    font-size: 0.6875rem;
+    font-weight: 300;
+    color: #1a7a32;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.savingsValue {
+    font-size: 0.9375rem;
+    font-weight: 300;
+    color: #24a148;
+}
+
+.rating {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 16px;
+}
+
+.starIcon {
+    color: #f5a623;
+    fill: #f5a623;
+}
+
+.text {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    margin-bottom: 24px;
+    font-style: italic;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary);
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 300;
+    border-radius: 50%;
+}
+
+.authorInfo {
+    flex: 1;
+}
+
+.name {
+    font-size: 0.9375rem;
+    font-weight: 300;
+    color: var(--color-text-primary);
+}
+
+.position {
+    font-size: 0.8125rem;
+    color: var(--color-text-tertiary);
+}
+
+.hotel {
+    font-size: 0.8125rem;
+    color: var(--color-primary);
+    font-weight: 300;
+}

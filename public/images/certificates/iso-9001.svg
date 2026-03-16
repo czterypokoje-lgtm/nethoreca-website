@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+  <!-- Globe Grid -->
+  <circle cx="50" cy="50" r="40" stroke="#005da6" stroke-width="3" fill="none" />
+  <path d="M10,50 L90,50" stroke="#005da6" stroke-width="2" fill="none" />
+  <path d="M50,10 L50,90" stroke="#005da6" stroke-width="2" fill="none" />
+  <ellipse cx="50" cy="50" rx="40" ry="15" stroke="#005da6" stroke-width="2" fill="none" />
+  <ellipse cx="50" cy="50" rx="15" ry="40" stroke="#005da6" stroke-width="2" fill="none" />
+  
+  <!-- Text -->
+  <text x="100" y="60" font-family="Arial, sans-serif" font-weight="900" font-size="60" fill="#005da6">ISO</text>
+  <text x="100" y="90" font-family="Arial, sans-serif" font-weight="bold" font-size="24" fill="#005da6">9001:2015</text>
+</svg>

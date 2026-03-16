@@ -1,0 +1,190 @@
+/* Navigation Styles - IBM Design Language */
+
+.nav {
+    background-color: var(--color-ui-01);
+    border-bottom: 1px solid var(--color-ui-03);
+    position: sticky;
+    top: 0;
+    z-index: var(--z-sticky);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.navContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-05) 0;
+    gap: var(--space-08);
+}
+
+/* Logo - Clean, Professional */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-03);
+    text-decoration: none;
+    transition: opacity var(--transition-fast);
+}
+
+.logo:hover {
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.logoWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.logoImage {
+    height: 64px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Navigation Links - Clean */
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: var(--space-06);
+    flex: 1;
+    justify-content: center;
+}
+
+.navLink {
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-regular);
+    font-size: 0.875rem;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    padding: var(--space-03) var(--space-04);
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+    position: relative;
+    border-bottom: 2px solid transparent;
+}
+
+.navLink:hover {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+    text-decoration: none;
+}
+
+/* Dropdown - Minimal */
+.dropdown {
+    position: relative;
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-ui-01);
+    border: 1px solid var(--color-ui-03);
+    box-shadow: var(--shadow-03);
+    padding: var(--space-04);
+    min-width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: all var(--transition-base);
+    z-index: var(--z-dropdown);
+    margin-top: var(--space-03);
+}
+
+.dropdown:hover .dropdownMenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdownMenu a {
+    display: block;
+    padding: var(--space-04);
+    color: var(--color-text-primary);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    font-size: 0.875rem;
+    border-left: 2px solid transparent;
+}
+
+.dropdownMenu a:hover {
+    background-color: var(--color-ui-02);
+    color: var(--color-primary);
+    border-left-color: var(--color-primary);
+    padding-left: var(--space-05);
+    text-decoration: none;
+}
+
+/* CTA Button - IBM Blue */
+.ctaButton {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    padding: var(--space-04) var(--space-06);
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-semibold);
+    font-size: 0.875rem;
+    text-decoration: none;
+    border: 1px solid var(--color-primary);
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-03);
+}
+
+.ctaButton:hover {
+    background-color: var(--color-primary-hover);
+    border-color: var(--color-primary-hover);
+    text-decoration: none;
+}
+
+/* Mobile Menu Button */
+.mobileMenuBtn {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    padding: var(--space-03);
+    cursor: pointer;
+}
+
+.mobileMenuBtn span {
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-text-primary);
+    transition: all var(--transition-fast);
+}
+
+.mobileMenuBtn:hover span {
+    background-color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .navLinks {
+        display: none;
+    }
+
+    .mobileMenuBtn {
+        display: flex;
+    }
+
+    .ctaButton {
+        padding: var(--space-03) var(--space-05);
+        font-size: 0.8125rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .logoImage {
+        height: 48px;
+    }
+
+    .ctaButton {
+        display: none;
+    }
+}

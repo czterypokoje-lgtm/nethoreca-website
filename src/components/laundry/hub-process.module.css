@@ -1,0 +1,281 @@
+.section {
+    padding: 6rem 0;
+    background: white;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: #64748b;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* Visual Side (Left) */
+.visualSide {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    height: 600px;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+}
+
+.visualImage {
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.visualSide:hover .visualImage {
+    transform: scale(1.03);
+}
+
+.hygieneBox {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    right: 20px;
+    background: white;
+    padding: 2.5rem;
+    color: #3b82f6;
+    border-radius: 16px;
+    z-index: 5;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border-left: 6px solid #3b82f6;
+}
+
+.hygieneTitle {
+    font-size: 1.75rem;
+    font-weight: 300;
+    margin-bottom: 0.75rem;
+    color: #0f172a;
+    letter-spacing: -0.01em;
+}
+
+.hygieneText {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: #475569;
+    margin: 0;
+}
+
+.connectionLine {
+    position: absolute;
+    right: -4rem;
+    top: 50%;
+    width: 4rem;
+    height: 2px;
+    background: linear-gradient(to right, #3b82f6, transparent);
+    display: none;
+    /* Only show on desktop */
+}
+
+@media (min-width: 1025px) {
+    .connectionLine {
+        display: block;
+    }
+}
+
+/* Process Side (Right - Circular) */
+.processSide {
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cycleContainer {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+/* The Center Hub */
+.hubCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 160px;
+    height: 160px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px rgba(59, 130, 246, 0.05), 0 20px 40px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+    padding: 1rem;
+}
+
+.hubLogo {
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: #0f172a;
+    line-height: 1;
+}
+
+.hubSub {
+    font-size: 0.875rem;
+    color: #3b82f6;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+}
+
+/* The Orbit Circle (Dashed Line) */
+.orbitCircle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    height: 380px;
+    border: 2px dashed #cbd5e1;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Process Steps */
+.step {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 120px;
+    z-index: 5;
+    transition: all 0.3s ease;
+}
+
+.step:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    z-index: 20;
+}
+
+.stepIcon {
+    width: 64px;
+    height: 64px;
+    background: white;
+    border-radius: 50%;
+    border: 2px solid #3b82f6;
+    color: #3b82f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.step:hover .stepIcon {
+    background: #3b82f6;
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.4);
+}
+
+.stepTitle {
+    font-weight: 300;
+    font-size: 0.875rem;
+    color: #334155;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+/* Arrows */
+.arrow {
+    position: absolute;
+    color: #cbd5e1;
+    z-index: 2;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .visualSide {
+        height: 400px;
+        order: -1;
+    }
+
+    .hygieneBox {
+        padding: 1.5rem;
+        bottom: 20px;
+        left: 15px;
+        right: 15px;
+    }
+
+    .hygieneTitle {
+        font-size: 1.5rem;
+    }
+
+    .hygieneText {
+        font-size: 0.95rem;
+    }
+
+    .processSide {
+        height: auto;
+        padding: 2rem 0;
+    }
+
+    .cycleContainer {
+        display: none;
+        /* Hide circular on mobile */
+    }
+
+    .mobileSteps {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    .mobileStepCard {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        background: #f8fafc;
+        padding: 1.5rem;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+    }
+}
+
+@media (min-width: 1025px) {
+    .mobileSteps {
+        display: none;
+    }
+}

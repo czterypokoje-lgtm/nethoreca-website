@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <path fill="#009c8d" d="M20,100 Q20,20 100,20 Q180,20 180,100 Q180,180 100,180 Q20,180 20,100 Z" />
+  <path fill="#009c8d" d="M180,20 L180,80 L120,20 Z" />
+  <text x="100" y="85" font-family="Arial, sans-serif" font-weight="bold" font-size="28" fill="white" text-anchor="middle">OEKO</text>
+  <text x="100" y="115" font-family="Arial, sans-serif" font-weight="bold" font-size="28" fill="white" text-anchor="middle">TEX®</text>
+  <text x="100" y="150" font-family="Arial, sans-serif" font-weight="bold" font-size="16" fill="white" text-anchor="middle">STANDARD 100</text>
+</svg>

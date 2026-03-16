@@ -1,0 +1,114 @@
+/* ProductCard Styles - IBM Design Language */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 1px solid var(--color-ui-03);
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: all 200ms ease;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-color: var(--color-ui-04);
+}
+
+.imageWrapper {
+    position: relative;
+    height: 240px;
+    background-color: var(--color-background-alt);
+    overflow: hidden;
+}
+
+.image {
+    object-fit: cover;
+    transition: transform 300ms ease;
+}
+
+.card:hover .image {
+    transform: scale(1.05);
+}
+
+.categoryLabel {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--color-text-primary);
+    font-size: 0.75rem;
+    font-weight: 300;
+    padding: 4px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--color-text-primary);
+    margin-bottom: 8px;
+}
+
+.description {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+.featureList {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+    border-top: 1px solid var(--color-ui-02);
+    padding-top: 16px;
+}
+
+.featureItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8125rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 8px;
+}
+
+.featureIcon {
+    color: #24a148;
+    flex-shrink: 0;
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-primary);
+    margin-top: auto;
+}
+
+.actionLabel {
+    font-size: 0.875rem;
+    font-weight: 300;
+}
+
+.actionIcon {
+    transition: transform 150ms ease;
+}
+
+.card:hover .actionIcon {
+    transform: translateX(4px);
+}

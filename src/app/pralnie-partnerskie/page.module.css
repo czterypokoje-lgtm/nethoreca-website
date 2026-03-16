@@ -1,0 +1,392 @@
+/* Partner Hub Page Styles - Network Theme */
+.main {
+    min-height: 100vh;
+    background: #f8fafc;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Hero Section */
+.hero {
+    padding: 6rem 0 5rem;
+    background: linear-gradient(135deg, #004b87 0%, #0f172a 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.heroGrid {
+    display: grid;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .heroGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.partnerBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    color: #6dc7b8;
+}
+
+.heroTitle {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, #ffffff 0%, #e2e8f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.heroSubtitle {
+    display: block;
+    font-size: 1.25rem;
+    color: #6dc7b8;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.heroDescription {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2.5rem;
+    max-width: 540px;
+}
+
+.heroButtons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btnPrimary {
+    padding: 1rem 2rem;
+    background: #6dc7b8;
+    color: #0f172a;
+    font-weight: 300;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btnPrimary:hover {
+    background: #5ab3a4;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(109, 199, 184, 0.2);
+}
+
+.btnSecondary {
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-weight: 300;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btnSecondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: white;
+}
+
+.heroVisual {
+    position: relative;
+    /* Placeholder styles for abstract map if no image */
+    min-height: 400px;
+    background: radial-gradient(circle at center, rgba(109, 199, 184, 0.1) 0%, transparent 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Stats Overlay in Hero */
+.heroStats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+}
+
+.statItem strong {
+    display: block;
+    font-size: 2rem;
+    font-weight: 300;
+    color: white;
+}
+
+.statItem span {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Network Map Section */
+.mapSection {
+    padding: 6rem 0;
+    background: #fff;
+    text-align: center;
+}
+
+.sectionHeader {
+    max-width: 700px;
+    margin: 0 auto 3rem;
+}
+
+.sectionLabel {
+    color: #004b87;
+    font-weight: 300;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    color: #0f172a;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.sectionDesc {
+    font-size: 1.125rem;
+    color: #64748b;
+}
+
+/* Regions Grid */
+.regionsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+}
+
+.regionCard {
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.regionCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.1);
+    border-color: #6dc7b8;
+}
+
+.regionTitle {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #004b87;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.cityList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cityList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f8fafc;
+}
+
+.cityList li:last-child {
+    border-bottom: none;
+}
+
+.cityName {
+    font-weight: 300;
+    color: #334155;
+}
+
+.partnerCount {
+    font-size: 0.875rem;
+    color: #6dc7b8;
+    background: rgba(109, 199, 184, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-weight: 300;
+}
+
+/* Dual Audience Sections */
+.splitSection {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+    .splitSection {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.audienceBlock {
+    padding: 5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.forHotels {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+
+.forLaundries {
+    background: #0f172a;
+    color: #ffffff;
+    /* Explicit white */
+}
+
+.forLaundries h2,
+.forLaundries p,
+.forLaundries li,
+.forLaundries span:not(.audienceBadge) {
+    color: #ffffff !important;
+    /* Force white for all text elements */
+}
+
+.audienceBadge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-weight: 300;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+}
+
+.bgBlue {
+    background: #e0f2fe;
+    color: #004b87;
+}
+
+.bgGreen {
+    background: rgba(109, 199, 184, 0.2);
+    color: #6dc7b8;
+}
+
+.audienceTitle {
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+.benefitList {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+}
+
+.benefitList li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.0625rem;
+}
+
+.forHotels .benefitList li svg {
+    color: #004b87;
+}
+
+.forLaundries .benefitList li svg {
+    color: #6dc7b8;
+}
+
+/* CTA Section (Lead Forms) */
+.formSection {
+    padding: 6rem 0;
+    background: white;
+    text-align: center;
+}
+
+.formGrid {
+    display: grid;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 3rem auto 0;
+}
+
+@media (min-width: 768px) {
+    .formGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.formCard {
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid #e2e8f0;
+    background: white;
+    transition: all 0.3s;
+}
+
+.formCard:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    border-color: #cbd5e1;
+}
+
+.cardIcon {
+    width: 64px;
+    height: 64px;
+    background: #f8fafc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: #004b87;
+}
+
+.formCard h3 {
+    font-size: 1.5rem;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.formCard p {
+    color: #64748b;
+    margin-bottom: 2rem;
+}

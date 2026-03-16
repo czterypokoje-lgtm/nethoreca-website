@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+  <rect x="10" y="10" width="60" height="80" rx="5" stroke="#223b82" stroke-width="4" fill="white" />
+  <path d="M30,50 L40,65 L65,35" stroke="#4a9c2d" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <text x="85" y="45" font-family="Arial, sans-serif" font-weight="900" font-size="36" fill="#223b82">REACH</text>
+  <text x="85" y="75" font-family="Arial, sans-serif" font-weight="bold" font-size="24" fill="#666">COMPLIANT</text>
+</svg>

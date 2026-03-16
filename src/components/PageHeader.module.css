@@ -1,0 +1,54 @@
+/* PageHeader Styles - IBM Design Language */
+
+.header {
+    background-color: var(--color-background-alt);
+    padding: 64px 0 48px;
+    border-bottom: 1px solid var(--color-ui-03);
+}
+
+.navigation {
+    margin-bottom: 24px;
+}
+
+.backLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 150ms ease;
+}
+
+.backLink:hover {
+    color: var(--color-primary);
+}
+
+.content {
+    max-width: 800px;
+}
+
+.title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 300;
+    color: var(--color-text-primary);
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.subtitle {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.description {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    max-width: 640px;
+}

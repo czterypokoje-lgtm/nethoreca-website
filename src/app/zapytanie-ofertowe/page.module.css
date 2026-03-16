@@ -1,0 +1,574 @@
+/* Quote Request Page Styles */
+.main {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+}
+
+/* Hero Section */
+.hero {
+    padding: 4rem 0 2rem;
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+    color: white;
+    text-align: center;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.heroContent {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #ff6600 0%, #ff8533 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+}
+
+.heroTitle {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 0 0 1rem;
+    color: white !important;
+}
+
+.highlight {
+    background: linear-gradient(90deg, #60a5fa 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.heroText {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .hero {
+        padding: 5rem 0 3rem;
+    }
+
+    .heroTitle {
+        font-size: 3rem;
+    }
+}
+
+/* Trust Bar */
+.trustBar {
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 1rem 0;
+}
+
+.trustGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.trustItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #374151;
+    font-size: 0.875rem;
+    font-weight: 300;
+}
+
+.trustItem svg {
+    color: #10b981;
+}
+
+@media (min-width: 768px) {
+    .trustGrid {
+        gap: 2.5rem;
+    }
+}
+
+/* Form Section */
+.formSection {
+    padding: 3rem 0 5rem;
+}
+
+.formGrid {
+    display: grid;
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .formGrid {
+        grid-template-columns: 1fr 380px;
+        gap: 3rem;
+    }
+}
+
+/* Form Card */
+.formCard {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+}
+
+.formHeader {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.formHeader h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #0f172a;
+    margin: 0 0 0.5rem;
+}
+
+.formHeader p {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+/* Form Steps */
+.formStep {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.formStep:last-of-type {
+    border-bottom: none;
+    margin-bottom: 1.5rem;
+}
+
+.stepTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #0f172a;
+    margin: 0 0 1.25rem;
+}
+
+.stepNumber {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+    color: white;
+    border-radius: 50%;
+    font-size: 0.875rem;
+    font-weight: 300;
+}
+
+.formRow {
+    display: grid;
+    gap: 1rem;
+}
+
+@media (min-width: 640px) {
+    .formRow {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.formGroup {
+    margin-bottom: 1rem;
+}
+
+.formGroup label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 0.5rem;
+    background: #fafafa;
+    transition: all 0.2s ease;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+    color: #9ca3af;
+}
+
+.formHint {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin: 0 0 1rem;
+}
+
+/* Checkbox Grid */
+.checkboxGrid {
+    display: grid;
+    gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+    .checkboxGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.checkboxCard {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.checkboxCard:hover {
+    border-color: #2563eb;
+    background: #f8fafc;
+}
+
+.checkboxCard input {
+    margin-top: 0.25rem;
+    width: 18px;
+    height: 18px;
+    accent-color: #2563eb;
+}
+
+.checkboxCard input:checked+.checkboxContent strong {
+    color: #2563eb;
+}
+
+.checkboxContent strong {
+    display: block;
+    font-size: 0.9375rem;
+    color: #0f172a;
+    margin-bottom: 0.25rem;
+}
+
+.checkboxContent span {
+    font-size: 0.8125rem;
+    color: #6b7280;
+}
+
+/* Radio Group */
+.radioGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.radioOption {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.radioOption:hover {
+    border-color: #2563eb;
+    background: #f8fafc;
+}
+
+.radioOption input {
+    margin-top: 0.25rem;
+    width: 18px;
+    height: 18px;
+    accent-color: #2563eb;
+}
+
+.radioOption input:checked+.radioContent strong {
+    color: #2563eb;
+}
+
+.radioContent strong {
+    display: block;
+    font-size: 0.9375rem;
+    color: #0f172a;
+}
+
+.radioContent span {
+    font-size: 0.8125rem;
+    color: #6b7280;
+}
+
+/* Form Submit */
+.formSubmit {
+    padding-top: 1rem;
+}
+
+.privacyCheck {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.8125rem;
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+.privacyCheck input {
+    margin-top: 0.125rem;
+    width: 16px;
+    height: 16px;
+    accent-color: #2563eb;
+}
+
+.privacyCheck a {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+.submitBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #ff6600 0%, #ff8533 100%);
+    color: white;
+    font-size: 1.0625rem;
+    font-weight: 300;
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255, 102, 0, 0.35);
+}
+
+.submitNote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+/* Sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sidebarCard {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    padding: 1.5rem;
+}
+
+.sidebarCard h3 {
+    font-size: 1.125rem;
+    font-weight: 300;
+    color: #0f172a;
+    margin: 0 0 1.25rem;
+}
+
+.benefitList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.benefitList li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.benefitList li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.benefitList li svg {
+    color: #10b981;
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+}
+
+.benefitList li strong {
+    display: block;
+    font-size: 0.9375rem;
+    color: #0f172a;
+}
+
+.benefitList li span {
+    font-size: 0.8125rem;
+    color: #6b7280;
+}
+
+/* Contact Info */
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.phoneLink {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+    color: white;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: 300;
+    transition: transform 0.2s ease;
+}
+
+.phoneLink:hover {
+    transform: translateY(-2px);
+}
+
+.emailLink {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 0.9375rem;
+}
+
+.emailLink:hover {
+    text-decoration: underline;
+}
+
+.hours {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin: 0.5rem 0 0;
+}
+
+/* Testimonial Card */
+.testimonialCard {
+    background: linear-gradient(135deg, #fef3c7 0%, #fef9f3 100%);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 1px solid #fcd34d;
+}
+
+.stars {
+    color: #f59e0b;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.testimonialCard blockquote {
+    font-size: 0.9375rem;
+    font-style: italic;
+    color: #374151;
+    line-height: 1.6;
+    margin: 0 0 1rem;
+}
+
+.testimonialCard cite {
+    display: block;
+    font-style: normal;
+}
+
+.testimonialCard cite strong {
+    display: block;
+    font-size: 0.875rem;
+    color: #0f172a;
+}
+
+.testimonialCard cite span {
+    font-size: 0.8125rem;
+    color: #6b7280;
+}
+
+/* Partners Section */
+.partnersSection {
+    background: #f8fafc;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.partnersSection h3 {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0 0 1.5rem;
+}
+
+.partnerLogos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.partnerLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.partnerLogo span {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: #9ca3af;
+    letter-spacing: 0.05em;
+}
