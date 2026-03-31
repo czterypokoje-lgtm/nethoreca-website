@@ -28,7 +28,7 @@ export default function BathMatsCollections() {
                                 <div style={{ position: 'relative', width: '100%', height: '100%' }}>
                                     <Image
                                         src={product.image}
-                                        alt={product.name}
+                                        alt={product.imageAlt || product.name}
                                         fill
                                         style={{ objectFit: 'cover' }}
                                     />

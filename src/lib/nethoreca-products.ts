@@ -9,6 +9,7 @@ export interface NetHorecaProduct {
     subcategory: string;
     description: string;
     image: string;
+    imageAlt?: string;
     grammage: string;
     material: string;
     specs: { label: string; value: string }[];
@@ -340,7 +341,8 @@ export const nethorecaProducts: NetHorecaProduct[] = [
         category: 'bath-mats',
         subcategory: 'Dywaniki łazienkowe',
         description: 'Profesjonalna stopka łazienkowa z serii Rosa. Gramatura 500g/m² zapewnia doskonałą absorpcję wody. Antypoślizgowy spód i trwała konstrukcja do intensywnego użytkowania hotelowego.',
-        image: '/products/nethoreca/stopka-rosa-70x50-kol-01-white-500g%2Fm2.jpg',
+        image: '/images/products/bathmats/stopka-rosa.webp',
+        imageAlt: 'Stopka łazienkowa hotelowa Rosa antypoślizgowa 500g NetHoreca',
         grammage: '500 g/m²',
         material: '100% bawełna',
         specs: [
@@ -475,7 +477,8 @@ export const nethorecaProducts: NetHorecaProduct[] = [
         category: 'bath-mats',
         subcategory: 'Dywaniki łazienkowe',
         description: 'Ekskluzywna stopka łazienkowa z tłoczonym wzorem greckim. Wysoka gramatura 650g/m² daje uczucie miękkości pod stopami.',
-        image: '/products/nethoreca/stopka-grecka.jpg',
+        image: '/images/products/bathmats/stopka-grecka-premium.webp',
+        imageAlt: 'Gruba stopka łazienkowa hotelowa ze wzorem greckim 650g NetHoreca',
         grammage: '650 g/m²',
         material: '100% bawełna',
         specs: [
@@ -713,7 +716,8 @@ export const nethorecaProducts: NetHorecaProduct[] = [
         category: 'bath-mats',
         subcategory: 'Dywaniki premium',
         description: 'Najgrubsza stopka w ofercie - gramatura 700 g/m². Wyjątkowo chłonna i miękka. Podwójny obszyć zapewnia trwałość. Standard dla hoteli 5*.',
-        image: '/products/nethoreca/stopka-700.jpg',
+        image: '/images/products/bathmats/stopka-premium-700g.webp',
+        imageAlt: 'Najgrubsza hotelowa stopka łazienkowa premium 700g biała z podwójnym obszyciem',
         grammage: '700 g/m²',
         material: '100% bawełna',
         specs: [
@@ -738,7 +742,8 @@ export const nethorecaProducts: NetHorecaProduct[] = [
         category: 'bath-mats',
         subcategory: 'Dywaniki kolorowe',
         description: 'Nowoczesna stopka w kolorze szarym. Gramatura 650 g/m² zapewnia stabilność i chłonność. Idealny do łazienek w stylu minimalistycznym i industrial.',
-        image: '/products/nethoreca/stopka-grey.jpg',
+        image: '/images/products/bathmats/stopka-szara-elegance.webp',
+        imageAlt: 'Szara stopka łazienkowa hotelowa Elegance 650g do nowoczesnych łazienek',
         grammage: '650 g/m²',
         material: '100% bawełna',
         specs: [
