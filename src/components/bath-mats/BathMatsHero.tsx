@@ -50,8 +50,8 @@ export default function BathMatsHero() {
                     <div className={styles.heroVisual}>
                         <div className={styles.heroImageWrapper}>
                             <Image
-                                src="/products/york/stopka-rosa-70x50-kol-01-white-500g%2Fm2.jpg"
-                                alt="Stopka łazienkowa hotelowa frotte"
+                                src="/images/products/bathmats/stopka-hero.webp"
+                                alt="Gruba stopka łazienkowa hotelowa z eleganckim tłoczeniem"
                                 width={600}
                                 height={800}
                                 priority
