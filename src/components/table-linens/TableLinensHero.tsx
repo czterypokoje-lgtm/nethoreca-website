@@ -49,7 +49,7 @@ export default function TableLinensHero() {
                     <div className={styles.heroVisual}>
                         <div className={styles.heroImageWrapper}>
                             <Image
-                                src="/images/products/table-linens/hero-obrus.webp"
+                                src="/images/products/table-linens/obrus-standard.webp"
                                 alt="Elegancki obrus premium z owocami dekoracyjnymi na stole bankietowym"
                                 width={600}
                                 height={800}
@@ -62,7 +62,7 @@ export default function TableLinensHero() {
                             <Restaurant size={32} style={{ color: '#004b87' }} />
                             <div>
                                 <strong style={{ color: '#0f172a', display: 'block' }}>Goście to docenią</strong>
-                                <span style={{ color: '#475569', fontSize: '0.875rem' }}>Wyjątkowa estetyka</span>
+                                <span style={{ color: '#004b87', fontSize: '0.875rem', fontWeight: '500' }}>Wyjątkowa estetyka</span>
                             </div>
                         </div>
                     </div>
