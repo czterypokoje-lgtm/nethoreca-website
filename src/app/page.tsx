@@ -63,14 +63,14 @@ export default function Home() {
             </div>
 
             {/* Right Column - Hero Image */}
-            <div className={styles.heroVisual} style={{ minHeight: '600px', height: '100%', position: 'relative', width: '100%' }}>
+            <div className={styles.heroVisual} style={{ minHeight: '400px', height: '100%', position: 'relative', width: '100%' }}>
               <Image
-                src="/images/home/logistyka-serwis.webp"
+                src="/images/home/logistyka-serwis.jpg"
                 alt="Pracownik serwisu logistycznego z zapasem czystych, najwyższej jakości ręczników hotelowych"
                 fill
                 priority
                 className={styles.heroImage}
-                style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                style={{ objectFit: 'contain', objectPosition: 'center center' }}
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
