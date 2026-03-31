@@ -65,8 +65,8 @@ export default function Home() {
             {/* Right Column - Hero Image */}
             <div className={styles.heroVisual} style={{ minHeight: '600px', height: '100%', position: 'relative', width: '100%' }}>
               <Image
-                src="/images/team/katarzyna.webp"
-                alt="Specjalista NetHoreca do Twojej dyspozycji"
+                src="/images/home/logistyka-serwis.webp"
+                alt="Pracownik serwisu logistycznego z zapasem czystych, najwyższej jakości ręczników hotelowych"
                 fill
                 priority
                 className={styles.heroImage}
