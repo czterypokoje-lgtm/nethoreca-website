@@ -75,7 +75,7 @@ const textileCategories = [
         id: 'stopki',
         title: 'Stopki Łazienkowe',
         description: 'Grube i chłonne dywaniki łazienkowe o gramaturze do 700 g/m². Zapewnij bezpieczeństwo i komfort.',
-        image: '/products/york/stopka-rosa-70x50-kol-01-white-500g%2Fm2.jpg',
+        image: '/images/products/bathmats/stopka-hero.webp',
         features: ['Gramatura 500-700 g/m²', 'Wzór Grecki', 'Antypoślizgowe'],
         link: '/tekstylia-hotelowe/stopki'
     }
