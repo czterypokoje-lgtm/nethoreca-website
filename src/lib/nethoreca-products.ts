@@ -424,7 +424,8 @@ export const nethorecaProducts: NetHorecaProduct[] = [
         category: 'table-linens',
         subcategory: 'Bielizna stołowa',
         description: 'Profesjonalny obrus gastronomiczny o splocie atłasowym (satynowym). Gładki, lśniący i niezwykle elegancki. Mieszanka bawełniano-poliestrowa dla trwałości.',
-        image: '/products/nethoreca/obrus-satyna.jpg',
+        image: '/images/products/table-linens/obrus-standard.webp',
+        imageAlt: 'Biały obrus satynowy gastronomiczny na stół restauracyjny',
         grammage: '210 g/m²',
         material: '50% bawełna / 50% poliester',
         specs: [
@@ -451,7 +452,8 @@ export const nethorecaProducts: NetHorecaProduct[] = [
         category: 'table-linens',
         subcategory: 'Obrusy plamoodporne',
         description: 'Praktyczny obrus z wykończeniem plamoodpornym. Płyny nie wsiąkają w strukturę tkaniny ("efekt lotosu"). Idealny do ogródków restauracyjnych i śniadaniowych.',
-        image: '/products/nethoreca/obrus-plamoodporny.jpg',
+        image: '/images/products/table-linens/obrus-standard.webp',
+        imageAlt: 'Biały obrus hotelowy plamoodporny z efektem lotosu',
         grammage: '230 g/m²',
         material: '100% poliester',
         specs: [
@@ -610,7 +612,8 @@ export const nethorecaProducts: NetHorecaProduct[] = [
         category: 'table-linens',
         subcategory: 'Obrusy premium',
         description: 'Obrus o wyglądzie naturalnego lnu. Tkanina poliestrowa o gramaturze 240 g/m² imitująca len - łatwa w pielęgnacji, nie wymaga prasowania. Idealny dla restauracji eko i bistro.',
-        image: '/products/nethoreca/obrus-len.jpg',
+        image: '/images/products/table-linens/obrus-standard.webp',
+        imageAlt: 'Obrus bielony imitujący naturalny len dla restauracji premium',
         grammage: '240 g/m²',
         material: '100% poliester (imitacja lnu)',
         specs: [
@@ -636,7 +639,8 @@ export const nethorecaProducts: NetHorecaProduct[] = [
         category: 'table-linens',
         subcategory: 'Obrusy żakardowe',
         description: 'Elegancki obrus żakardowy z subtelnym wzorem. Gramatura 220 g/m², mieszanka bawełniano-poliestrowa. Tkany wzór dodaje prestiżu, idealny na bankiety i uroczystości.',
-        image: '/products/nethoreca/obrus-jacquard.jpg',
+        image: '/images/products/table-linens/obrus-standard.webp',
+        imageAlt: 'Biały obrus żakardowy na stół bankietowy z eleganckim wzorem',
         grammage: '220 g/m²',
         material: '50% bawełna / 50% poliester',
         specs: [
@@ -663,7 +667,8 @@ export const nethorecaProducts: NetHorecaProduct[] = [
         category: 'table-linens',
         subcategory: 'Serwetki',
         description: 'Profesjonalne serwetki bawełniane 50×50 cm. 100% bawełna o gramaturze 180 g/m². Idealne do składania w dekoracyjne formy. Dostępne w wielu kolorach.',
-        image: '/products/nethoreca/serwetka.jpg',
+        image: '/images/products/table-linens/serwetka.webp',
+        imageAlt: 'Biała serwetka bawełniana gastronomiczna 50x50 cm idealna do składania',
         grammage: '180 g/m²',
         material: '100% bawełna',
         specs: [
@@ -689,7 +694,8 @@ export const nethorecaProducts: NetHorecaProduct[] = [
         category: 'table-linens',
         subcategory: 'Skirtingi',
         description: 'Profesjonalny skirting (obicia stołów) z plisą pudełkową. Wysokość 75 cm, szyty na wymiar. Materiał poliestrowy, łatwy w montażu na rzepy. Idealny na wesela i konferencje.',
-        image: '/products/nethoreca/skirting.jpg',
+        image: '/images/products/table-linens/obrus-standard.webp',
+        imageAlt: 'Klasyczny biały obrus i skirting plisowany na stoły bankietowe',
         grammage: '200 g/m²',
         material: '100% poliester',
         specs: [

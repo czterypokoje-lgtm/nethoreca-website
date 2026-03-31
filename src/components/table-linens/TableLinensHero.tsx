@@ -49,8 +49,8 @@ export default function TableLinensHero() {
                     <div className={styles.heroVisual}>
                         <div className={styles.heroImageWrapper}>
                             <Image
-                                src="/products/york/obrus-satyna.jpg"
-                                alt="Elegancki obrus w restauracji hotelowej"
+                                src="/images/products/table-linens/hero-obrus.webp"
+                                alt="Elegancki obrus premium z owocami dekoracyjnymi na stole bankietowym"
                                 width={600}
                                 height={800}
                                 priority
