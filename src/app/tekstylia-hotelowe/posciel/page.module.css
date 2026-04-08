@@ -27,7 +27,13 @@
 .container {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 2rem;
+    }
 }
 
 /* Typography Overrides */
@@ -101,7 +107,7 @@
 
 .heroTitle,
 .main .heroSection .heroTitle {
-    font-size: 3.5rem;
+    font-size: clamp(1.75rem, 5vw, 3.5rem);
     font-weight: 300;
     line-height: 1.1;
     margin: 0 0 1.5rem;
@@ -229,6 +235,12 @@
     animation: float 6s ease-in-out infinite;
 }
 
+@media (max-width: 768px) {
+    .floatingCard {
+        display: none;
+    }
+}
+
 @keyframes float {
     0% {
         transform: translateY(0px);
@@ -251,9 +263,16 @@
 
 .calculatorGrid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
     align-items: stretch;
+}
+
+@media (min-width: 1024px) {
+    .calculatorGrid {
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+    }
 }
 
 .calculatorForm {
@@ -261,6 +280,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+@media (max-width: 1024px) {
+    .calculatorForm {
+        padding-right: 0;
+    }
 }
 
 .calcTitle {
@@ -341,6 +366,12 @@
     box-shadow: 0 20px 40px rgba(0, 75, 135, 0.25);
     position: relative;
     overflow: hidden;
+}
+
+@media (max-width: 480px) {
+    .resultCard {
+        padding: 1.75rem 1.25rem;
+    }
 }
 
 /* Decoration circle */
@@ -470,15 +501,23 @@
     background: #f9f9f9;
 }
 
+.tableWrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 12px;
+    box-shadow: var(--shadow-card);
+}
+
 .sizeTable,
 .comparisonTable {
     width: 100%;
+    min-width: 500px;
     border-collapse: separate;
     border-spacing: 0;
     background: white;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: var(--shadow-card);
 }
 
 .sizeTable th,
@@ -518,6 +557,18 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 3rem;
+}
+
+@media (max-width: 1024px) {
+    .recommendations {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .recommendations {
+        grid-template-columns: 1fr;
+    }
 }
 
 .recCard {
@@ -567,9 +618,22 @@
 
 .rvbGrid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
     margin-bottom: 4rem;
+}
+
+@media (max-width: 1024px) {
+    .rvbGrid {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .rvbGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
 }
 
 .rvbColumn {
@@ -577,6 +641,12 @@
     border-radius: 20px;
     background: white;
     border: 1px solid #e0e0e0;
+}
+
+@media (max-width: 480px) {
+    .rvbColumn {
+        padding: 1.5rem;
+    }
 }
 
 .rvbColumn:first-child {
@@ -626,6 +696,19 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-bottom: 4rem;
+}
+
+@media (max-width: 1024px) {
+    .collectionsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .collectionsGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
 }
 
 .collectionCard {
@@ -700,8 +783,21 @@
 
 .specsGrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .specsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .specsGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .specBox {
@@ -998,7 +1094,6 @@
 /* Responsive */
 @media (max-width: 1024px) {
 
-    .calculatorGrid,
     .caseStudyContent {
         grid-template-columns: 1fr;
     }
@@ -1014,6 +1109,56 @@
         margin-left: auto;
         margin-right: auto;
         text-align: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroSection {
+        padding: 3rem 0 2.5rem;
+    }
+
+    .heroSubtitle {
+        font-size: 1rem;
+    }
+
+    .rvbColumn {
+        padding: 1.5rem;
+    }
+
+    .sectionTitle {
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+    }
+
+    .calcTitle {
+        font-size: 1.5rem;
+    }
+
+    .specsContent {
+        padding-right: 0;
+    }
+
+    .calculatorSection {
+        padding: 4rem 0;
+    }
+
+    .savingHighlight strong {
+        font-size: clamp(1.5rem, 6vw, 2.5rem);
+    }
+
+    .btnPrimaryFull {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    .heroButtons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btnPrimary,
+    .btnSecondary {
+        width: 100%;
         justify-content: center;
     }
 }

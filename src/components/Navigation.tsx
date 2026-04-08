@@ -1,13 +1,111 @@
+'use client';
+
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import styles from './Navigation.module.css';
 
+const navItems = [
+    {
+        label: 'Tekstylia Hotelowe',
+        href: '/tekstylia-hotelowe',
+        sub: [
+            { label: 'Ręczniki', href: '/tekstylia-hotelowe/reczniki' },
+            { label: 'Pościel', href: '/tekstylia-hotelowe/posciel' },
+            { label: 'Szlafroki', href: '/tekstylia-hotelowe/szlafroki' },
+            { label: 'Obrusy i Serwetki', href: '/tekstylia-hotelowe/obrusy' },
+            { label: 'Stopki Łazienkowe', href: '/tekstylia-hotelowe/stopki' },
+        ],
+    },
+    {
+        label: 'Chemia Ecolab',
+        href: '/chemia-ecolab',
+        sub: [
+            { label: 'Pralnia (ECOBRITE)', href: '/chemia-ecolab/pralnia' },
+            { label: 'Środki Czyszczące', href: '/chemia-ecolab/czyszczenie' },
+            { label: 'Dezynfekcja', href: '/chemia-ecolab/dezynfekcja' },
+            { label: 'Higiena Kuchni', href: '/chemia-ecolab/kuchnia' },
+            { label: 'Pielęgnacja Podłóg', href: '/chemia-ecolab/podlogi' },
+        ],
+    },
+    {
+        label: 'Pralnia dla Hoteli',
+        href: '/pralnia-dla-hoteli',
+        sub: [
+            { label: 'Warszawa', href: '/pralnia-dla-hoteli/warszawa' },
+            { label: 'Kraków', href: '/pralnia-dla-hoteli/krakow' },
+            { label: 'Gdańsk & Sopot', href: '/pralnia-dla-hoteli/gdansk' },
+            { label: 'Wrocław', href: '/pralnia-dla-hoteli/wroclaw' },
+            { label: 'Poznań', href: '/pralnia-dla-hoteli/poznan' },
+            { label: 'Zakopane', href: '/pralnia-dla-hoteli/zakopane' },
+        ],
+    },
+    {
+        label: 'Selpak Professional',
+        href: '/selpak-professional',
+        sub: [
+            { label: 'Ręczniki Papierowe', href: '/selpak-professional/produkty?category=tissue-paper' },
+            { label: 'Papier Toaletowy', href: '/selpak-professional/produkty?category=tissue-paper' },
+            { label: 'Serwetki', href: '/selpak-professional/produkty?category=napkins' },
+            { label: 'Dozowniki', href: '/selpak-professional/produkty?category=dispensers' },
+        ],
+    },
+    {
+        label: 'Sprzęt i Akcesoria',
+        href: '/sprzet-akcesoria',
+        sub: [
+            { label: 'Mopy Rasant', href: '/sprzet-akcesoria/mopy' },
+            { label: 'Wózki Mobilette', href: '/sprzet-akcesoria/wozki' },
+            { label: 'Systemy Dozujące', href: '/sprzet-akcesoria/systemy-dozujace' },
+            { label: 'Akcesoria', href: '/sprzet-akcesoria/akcesoria' },
+        ],
+    },
+    { label: 'Wynajem', href: '/kalkulator-oszczednosci', sub: [] },
+    { label: 'O Nas', href: '/o-nas', sub: [] },
+    { label: 'Kontakt', href: '/kontakt', sub: [] },
+];
+
 export default function Navigation() {
+    const [mobileOpen, setMobileOpen] = useState(false);
+    const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+    const navRef = useRef<HTMLElement>(null);
+
+    // Close mobile menu on Escape key
+    useEffect(() => {
+        const handleKey = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') {
+                setMobileOpen(false);
+                setOpenDropdown(null);
+            }
+        };
+        document.addEventListener('keydown', handleKey);
+        return () => document.removeEventListener('keydown', handleKey);
+    }, []);
+
+    // Prevent body scroll when mobile menu is open
+    useEffect(() => {
+        if (mobileOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => { document.body.style.overflow = ''; };
+    }, [mobileOpen]);
+
+    const closeMobile = () => {
+        setMobileOpen(false);
+        setOpenDropdown(null);
+    };
+
+    const toggleMobileDropdown = (label: string) => {
+        setOpenDropdown(prev => prev === label ? null : label);
+    };
+
     return (
-        <nav className={styles.nav}>
+        <nav className={styles.nav} ref={navRef} role="navigation" aria-label="Główna nawigacja">
             <div className="container">
                 <div className={styles.navContent}>
                     {/* Logo */}
-                    <Link href="/" className={styles.logo}>
+                    <Link href="/" className={styles.logo} onClick={closeMobile}>
                         <div className={styles.logoWrapper}>
                             <img
                                 src="/nethoreca-logo.webp"
@@ -19,89 +117,122 @@ export default function Navigation() {
 
                     {/* Desktop Navigation */}
                     <div className={styles.navLinks}>
-                        <div className={styles.dropdown}>
-                            <Link href="/tekstylia-hotelowe" className={styles.navLink}>
-                                Tekstylia Hotelowe
-                            </Link>
-                            <div className={styles.dropdownMenu}>
-                                <Link href="/tekstylia-hotelowe/reczniki">Ręczniki</Link>
-                                <Link href="/tekstylia-hotelowe/posciel">Pościel</Link>
-                                <Link href="/tekstylia-hotelowe/szlafroki">Szlafroki</Link>
-                                <Link href="/tekstylia-hotelowe/obrusy">Obrusy i Serwetki</Link>
-                                <Link href="/tekstylia-hotelowe/stopki">Stopki Łazienkowe</Link>
-                            </div>
-                        </div>
-
-                        <div className={styles.dropdown}>
-                            <Link href="/chemia-ecolab" className={styles.navLink}>
-                                Chemia Ecolab
-                            </Link>
-                            <div className={styles.dropdownMenu}>
-                                <Link href="/chemia-ecolab/pralnia">Pralnia (ECOBRITE)</Link>
-                                <Link href="/chemia-ecolab/czyszczenie">Środki Czyszczące</Link>
-                                <Link href="/chemia-ecolab/dezynfekcja">Dezynfekcja</Link>
-                                <Link href="/chemia-ecolab/kuchnia">Higiena Kuchni</Link>
-                                <Link href="/chemia-ecolab/podlogi">Pielęgnacja Podłóg</Link>
-                            </div>
-                        </div>
-
-                        <div className={styles.dropdown}>
-                            <Link href="/pralnia-dla-hoteli" className={styles.navLink}>
-                                Pralnia dla Hoteli
-                            </Link>
-                            <div className={styles.dropdownMenu}>
-                                <Link href="/pralnia-dla-hoteli/warszawa">Warszawa</Link>
-                                <Link href="/pralnia-dla-hoteli/krakow">Kraków</Link>
-                                <Link href="/pralnia-dla-hoteli/gdansk">Gdańsk & Sopot</Link>
-                                <Link href="/pralnia-dla-hoteli/wroclaw">Wrocław</Link>
-                                <Link href="/pralnia-dla-hoteli/poznan">Poznań</Link>
-                                <Link href="/pralnia-dla-hoteli/zakopane">Zakopane</Link>
-                                <Link href="/pralnia-dla-hoteli">Zobacz więcej...</Link>
-                            </div>
-                        </div>
-
-                        <div className={styles.dropdown}>
-                            <Link href="/selpak-professional" className={styles.navLink}>
-                                Selpak Professional
-                            </Link>
-                            <div className={styles.dropdownMenu}>
-                                <Link href="/selpak-professional/produkty?category=tissue-paper">Ręczniki Papierowe</Link>
-                                <Link href="/selpak-professional/produkty?category=tissue-paper">Papier Toaletowy</Link>
-                                <Link href="/selpak-professional/produkty?category=napkins">Serwetki</Link>
-                                <Link href="/selpak-professional/produkty?category=dispensers">Dozowniki</Link>
-                            </div>
-                        </div>
-
-                        <div className={styles.dropdown}>
-                            <Link href="/sprzet-akcesoria" className={styles.navLink}>
-                                Sprzęt i Akcesoria
-                            </Link>
-                            <div className={styles.dropdownMenu}>
-                                <Link href="/sprzet-akcesoria/mopy">Mopy Rasant</Link>
-                                <Link href="/sprzet-akcesoria/wozki">Wózki Mobilette</Link>
-                                <Link href="/sprzet-akcesoria/systemy-dozujace">Systemy Dozujące</Link>
-                                <Link href="/sprzet-akcesoria/akcesoria">Akcesoria</Link>
-                            </div>
-                        </div>
-
-                        <Link href="/kalkulator-oszczednosci" className={styles.navLink}>Wynajem</Link>
-                        <Link href="/o-nas" className={styles.navLink}>O Nas</Link>
-                        <Link href="/kontakt" className={styles.navLink}>Kontakt</Link>
+                        {navItems.map((item) =>
+                            item.sub.length > 0 ? (
+                                <div key={item.label} className={styles.dropdown}>
+                                    <Link href={item.href} className={styles.navLink}>
+                                        {item.label}
+                                    </Link>
+                                    <div className={styles.dropdownMenu}>
+                                        {item.sub.map((s) => (
+                                            <Link key={s.label} href={s.href}>{s.label}</Link>
+                                        ))}
+                                    </div>
+                                </div>
+                            ) : (
+                                <Link key={item.label} href={item.href} className={styles.navLink}>
+                                    {item.label}
+                                </Link>
+                            )
+                        )}
                     </div>
 
-                    {/* CTA Button */}
+                    {/* Desktop CTA Button */}
                     <Link href="/zapytanie-ofertowe" className={styles.ctaButton}>
                         Zapytanie Ofertowe
                     </Link>
 
-                    {/* Mobile Menu Button */}
-                    <button className={styles.mobileMenuBtn} aria-label="Menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                    {/* Hamburger Button */}
+                    <button
+                        className={`${styles.mobileMenuBtn} ${mobileOpen ? styles.mobileMenuBtnOpen : ''}`}
+                        aria-label={mobileOpen ? 'Zamknij menu' : 'Otwórz menu'}
+                        aria-expanded={mobileOpen}
+                        aria-controls="mobile-menu"
+                        onClick={() => setMobileOpen(prev => !prev)}
+                    >
+                        <span />
+                        <span />
+                        <span />
                     </button>
                 </div>
             </div>
+
+            {/* Mobile Menu Overlay */}
+            <div
+                id="mobile-menu"
+                className={`${styles.mobileMenu} ${mobileOpen ? styles.mobileMenuOpen : ''}`}
+                aria-hidden={!mobileOpen}
+            >
+                <div className={styles.mobileMenuInner}>
+                    {/* Mobile CTA */}
+                    <Link
+                        href="/zapytanie-ofertowe"
+                        className={styles.mobileCta}
+                        onClick={closeMobile}
+                    >
+                        Zapytanie Ofertowe
+                    </Link>
+
+                    {/* Mobile Nav Items */}
+                    <ul className={styles.mobileNavList}>
+                        {navItems.map((item) => (
+                            <li key={item.label} className={styles.mobileNavItem}>
+                                {item.sub.length > 0 ? (
+                                    <>
+                                        <button
+                                            className={styles.mobileNavToggle}
+                                            onClick={() => toggleMobileDropdown(item.label)}
+                                            aria-expanded={openDropdown === item.label}
+                                        >
+                                            <span>{item.label}</span>
+                                            <svg
+                                                className={`${styles.chevron} ${openDropdown === item.label ? styles.chevronOpen : ''}`}
+                                                width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                aria-hidden="true"
+                                            >
+                                                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <ul className={`${styles.mobileSubList} ${openDropdown === item.label ? styles.mobileSubListOpen : ''}`}>
+                                            <li>
+                                                <Link href={item.href} className={styles.mobileSubLink} onClick={closeMobile}>
+                                                    → Wszystkie {item.label}
+                                                </Link>
+                                            </li>
+                                            {item.sub.map((s) => (
+                                                <li key={s.label}>
+                                                    <Link href={s.href} className={styles.mobileSubLink} onClick={closeMobile}>
+                                                        {s.label}
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </>
+                                ) : (
+                                    <Link href={item.href} className={styles.mobileNavLink} onClick={closeMobile}>
+                                        {item.label}
+                                    </Link>
+                                )}
+                            </li>
+                        ))}
+                    </ul>
+
+                    {/* Contact info at bottom */}
+                    <div className={styles.mobileContact}>
+                        <a href="tel:+48500312292">📞 +48 500 312 292</a>
+                        <a href="mailto:kontakt@nethoreca.pl">✉ kontakt@nethoreca.pl</a>
+                    </div>
+                </div>
+            </div>
+
+            {/* Backdrop */}
+            {mobileOpen && (
+                <div
+                    className={styles.mobileBackdrop}
+                    onClick={closeMobile}
+                    aria-hidden="true"
+                />
+            )}
         </nav>
     );
 }

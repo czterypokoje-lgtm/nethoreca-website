@@ -499,3 +499,57 @@
     background: rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 0.5);
 }
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .hero {
+        padding: 4rem 0 3rem;
+    }
+
+    .brandName {
+        font-size: 2.25rem;
+    }
+
+    .heroSubtitle {
+        font-size: 1.25rem;
+    }
+
+    .heroDescription {
+        font-size: 1rem;
+    }
+
+    .heroButtons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btnPrimary, .btnSecondary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .aboutTitle {
+        font-size: 1.75rem;
+    }
+
+    .aboutText {
+        font-size: 1rem;
+    }
+
+    .ctaContent h2 {
+        font-size: 1.75rem;
+    }
+
+    .ctaButtons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btnWhite, .btnOutline {
+        width: 100%;
+        justify-content: center;
+    }
+}

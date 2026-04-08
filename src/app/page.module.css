@@ -880,6 +880,7 @@
 .laundryHighlight {
   background: linear-gradient(90deg, #38bdf8 0%, #818cf8 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -1003,7 +1004,20 @@
 @media (max-width: 1024px) {
   .heroGrid {
     grid-template-columns: 1fr;
-    gap: 48px;
+    min-height: auto;
+    gap: 0;
+  }
+
+  .heroContent {
+    padding: 60px 24px;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .heroVisual {
+    height: 400px;
+    min-height: 400px;
+    order: -1;
   }
 
   .heroText {
@@ -1043,7 +1057,11 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 60px 0 40px;
+    padding: 0;
+  }
+
+  .heroContent {
+    padding: 40px 20px;
   }
 
   .heroTitle {
@@ -1052,6 +1070,7 @@
 
   .heroButtons {
     flex-direction: column;
+    align-items: stretch;
   }
 
   .trustLogos {
@@ -1088,10 +1107,45 @@
 
   .ctaButtons {
     flex-direction: column;
+    align-items: stretch;
   }
 
   .ctaContact {
     flex-direction: column;
     gap: 24px;
+  }
+
+  .optionCard {
+    padding: 28px 20px;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroVisual {
+    height: 260px;
+    min-height: 260px;
+  }
+
+  .heroContent {
+    padding: 32px 16px;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+  }
+
+  .laundryFeatures {
+    grid-template-columns: 1fr;
   }
 }

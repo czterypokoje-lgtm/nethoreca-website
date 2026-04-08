@@ -1,0 +1,275 @@
+/* LaundryCalculator — CSS Module (replaces inline styles) */
+
+/* ── Section Wrapper ── */
+.section {
+    padding: 4rem 0;
+    background: #f8fafc;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+/* ── Section Header ── */
+.header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.title {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.subtitle {
+    color: #64748b;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* ── Two-column Grid ── */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+}
+
+/* ── Inputs Card ── */
+.formCard {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 480px) {
+    .formCard {
+        padding: 1.25rem;
+    }
+}
+
+.inputGroup {
+    margin-bottom: 2rem;
+}
+
+.inputLabel {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #0f172a;
+    font-size: 0.9375rem;
+}
+
+/* ── Range Slider Row ── */
+.rangeRow {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.rangeInput {
+    flex: 1;
+    accent-color: #3b82f6;
+    height: 6px;
+    cursor: pointer;
+    /* Ensure tall enough touch area on mobile */
+    min-height: 28px;
+}
+
+.rangeValue {
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: #3b82f6;
+    min-width: 80px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* ── Frequency Button Grid ── */
+.freqGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+@media (max-width: 480px) {
+    .freqGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.freqBtn {
+    padding: 0.875rem 0.5rem;
+    min-height: 48px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    background: white;
+    cursor: pointer;
+    font-size: 0.875rem;
+    color: #0f172a;
+    transition: all 0.15s ease;
+    touch-action: manipulation;
+    /* Remove 300ms tap delay */
+    -webkit-tap-highlight-color: transparent;
+}
+
+.freqBtn:hover {
+    border-color: #3b82f6;
+    background: #eff6ff;
+}
+
+.freqBtnActive {
+    border: 2px solid #3b82f6;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-weight: 600;
+}
+
+/* ── Select Inputs ── */
+.select {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    min-height: 48px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    font-size: 1rem;
+    background: white;
+    cursor: pointer;
+    color: #0f172a;
+    appearance: auto;
+}
+
+.select:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 1px;
+}
+
+/* ── Results Card ── */
+.resultsCard {
+    background: #1e293b;
+    padding: 2.5rem;
+    border-radius: 16px;
+    color: white;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 480px) {
+    .resultsCard {
+        padding: 1.5rem;
+    }
+}
+
+.currentCostBlock {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nethorecaBlock {
+    margin-bottom: 2rem;
+}
+
+.costLabel {
+    font-size: 0.875rem;
+    color: #94a3b8;
+    display: block;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.currentCostValue {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-weight: 700;
+    color: #ef4444;
+    line-height: 1.2;
+}
+
+.nethorecaCostValue {
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
+    font-weight: 800;
+    color: #4ade80;
+    line-height: 1.2;
+}
+
+.unit {
+    font-size: 1rem;
+    color: #94a3b8;
+    font-weight: 400;
+}
+
+/* ── Savings Highlight Box ── */
+.savingsBlock {
+    background: rgba(56, 189, 248, 0.1);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.savingsLabel {
+    font-size: 0.875rem;
+    color: #38bdf8;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.savingsMonthly {
+    font-size: clamp(1.125rem, 4vw, 1.5rem);
+    font-weight: 700;
+    color: white;
+}
+
+.savingsAnnual {
+    font-size: 1.0625rem;
+    color: #38bdf8;
+    margin-top: 0.5rem;
+}
+
+/* ── CTA Button ── */
+.ctaBtn {
+    width: 100%;
+    padding: 1rem;
+    min-height: 52px;
+    background: #3b82f6;
+    color: white;
+    font-weight: 700;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: background 0.2s ease;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.ctaBtn:hover,
+.ctaBtn:focus-visible {
+    background: #2563eb;
+}
+
+.disclaimer {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-top: 1rem;
+    text-align: center;
+}
