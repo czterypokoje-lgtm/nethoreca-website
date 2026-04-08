@@ -1,7 +1,6 @@
 'use client';
 
-import Image from 'next/image';
-import { CheckmarkFilled, MapCenter } from '@carbon/icons-react';
+import styles from './LaundryComponents.module.css';
 
 const cities = [
     { name: 'Warszawa', capacity: '5,000 kg/dzień', hotels: '25 Hoteli', code: 'WAW' },
@@ -25,7 +24,7 @@ export default function NetworkMap() {
                     </p>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: '4rem', alignItems: 'center' }}>
+                <div className={styles.gridContainer}>
                     {/* Visual Map */}
                     <div style={{
                         position: 'relative',

@@ -29,6 +29,8 @@ const pricingTiers = [
     }
 ];
 
+import styles from './LaundryComponents.module.css';
+
 export default function LaundryPricing() {
     return (
         <section id="cennik" style={{ padding: '6rem 0', background: 'white' }}>
@@ -42,7 +44,7 @@ export default function LaundryPricing() {
                     </p>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', alignItems: 'center' }}>
+                <div className={styles.pricingGrid}>
                     {pricingTiers.map((tier, idx) => (
                         <div key={idx} style={{
                             padding: '2.5rem',

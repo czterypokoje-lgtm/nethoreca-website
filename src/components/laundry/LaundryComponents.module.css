@@ -1,0 +1,72 @@
+/* Laundry Components Mobile Fixes */
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (max-width: 1024px) {
+    .gridContainer {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+.pricingGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .pricingGrid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+@media (max-width: 480px) {
+    .servicesGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.hubExplainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+@media (max-width: 768px) {
+    .hubExplainer {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+.certGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .certGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .certGrid {
+        grid-template-columns: 1fr;
+    }
+}

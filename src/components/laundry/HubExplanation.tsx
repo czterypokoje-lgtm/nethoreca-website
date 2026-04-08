@@ -56,6 +56,8 @@ const hubSteps = [
     }
 ];
 
+import stylesComp from './LaundryComponents.module.css';
+
 export default function HubExplanation() {
     return (
         <section style={{ padding: '6rem 0', background: 'white' }}>
@@ -73,12 +75,7 @@ export default function HubExplanation() {
                     </p>
                 </div>
 
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                    gap: '2rem',
-                    position: 'relative'
-                }}>
+                <div className={stylesComp.servicesGrid}>
                     {/* Connecting line visualization could be added here with absolute positioning or SVG */}
 
                     {hubSteps.map((step, index) => (

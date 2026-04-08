@@ -226,13 +226,11 @@ export default function Navigation() {
             </div>
 
             {/* Backdrop */}
-            {mobileOpen && (
-                <div
-                    className={styles.mobileBackdrop}
-                    onClick={closeMobile}
-                    aria-hidden="true"
-                />
-            )}
+            <div
+                className={`${styles.mobileBackdrop} ${mobileOpen ? styles.mobileBackdropOpen : ''}`}
+                onClick={closeMobile}
+                aria-hidden="true"
+            />
         </nav>
     );
 }

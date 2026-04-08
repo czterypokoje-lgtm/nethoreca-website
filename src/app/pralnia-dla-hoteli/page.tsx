@@ -10,7 +10,7 @@ import LaundryFAQ from '@/components/laundry/LaundryFAQ';
 import ReferenceSection from '@/components/sections/ReferenceSection';
 import TeamContactCTA from '@/components/shared/TeamContactCTA';
 import { teamMembers } from '@/lib/trust-signals';
-import { createPageMetadata } from '@/lib/seo-metadata';
+import styles from './page.module.css';
 
 export const metadata: Metadata = createPageMetadata({
     title: 'Pralnia dla Hoteli - Wynajem Tekstyliów + Pranie + Transport | Model HUB',
@@ -39,12 +39,14 @@ export default function PralniaPage() {
             <NetworkMap />
             <LaundryPricing />
             <ReferenceSection />
-            <div style={{ padding: '6rem 0', background: '#0f172a' }}>
-                <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '4rem', alignItems: 'center', padding: '1rem' }}>
+
+            {/* Case Study Section */}
+            <div className={styles.caseStudyWrapper}>
+                <div className={styles.caseStudyGrid}>
                     <div style={{ order: 1 }}>
                         <span style={{ color: '#6dc7b8', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', display: 'block', marginBottom: '1rem' }}>Case Study</span>
                         <h2 style={{ fontSize: '2.5rem', fontWeight: 300, margin: '1rem 0', color: 'white' }}>Hotel Verde Montana 4* Oszczędził 174,000 PLN</h2>
-                        <p style={{ fontSize: '1.5rem', color: 'rgba(255,255,255,0.9)', fontStyle: 'light', borderLeft: '3px solid #6dc7b8', paddingLeft: '2rem', margin: '2rem 0' }}>
+                        <p className={styles.quote}>
                             "Przejście na model Nethoreca to najlepsza decyzja operacyjna.
                             Uwolniliśmy przestrzeń po starej pralni na 2 nowe pokoje."
                         </p>
@@ -52,7 +54,7 @@ export default function PralniaPage() {
                             - Dyrektor Operacyjny, Hotel Verde Montana
                         </div>
                     </div>
-                    <div style={{ order: 2, position: 'relative', height: '400px', borderRadius: '24px', overflow: 'hidden' }}>
+                    <div className={styles.caseStudyImageWrapper} style={{ order: 2 }}>
                         <img
                             src="/images/case-studies/hotel-verde-montana-case-study.webp"
                             alt="Hotel Verde Montana"
@@ -69,10 +71,11 @@ export default function PralniaPage() {
             />
 
             <LaundryFAQ />
+
             {/* Final CTA Block */}
-            <section style={{ padding: '6rem 0', background: '#0f172a', textAlign: 'center', color: 'white' }}>
-                <h2 style={{ fontSize: '3rem', fontWeight: 300, marginBottom: '2rem', color: 'white' }}>Gotowy na Zmianę?</h2>
-                <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+            <section className={styles.finalCtaSection}>
+                <h2>Gotowy na Zmianę?</h2>
+                <div className={styles.ctaButtonGroup}>
                     <a href="#kalkulator" style={{ padding: '1rem 2rem', background: 'white', color: '#0f172a', borderRadius: '8px', fontWeight: 300, textDecoration: 'none' }}>
                         Oblicz Oszczędności
                     </a>

@@ -43,6 +43,8 @@ const services = [
     }
 ];
 
+import styles from './LaundryComponents.module.css';
+
 export default function LaundryServices() {
     return (
         <section style={{ padding: '6rem 0', background: '#f8fafc' }}>
@@ -56,7 +58,7 @@ export default function LaundryServices() {
                     </p>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '2rem' }}>
+                <div className={styles.servicesGrid}>
                     {services.map((service, idx) => (
                         <div key={idx} style={{ background: 'white', padding: '2rem', borderRadius: '16px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)', border: '1px solid #f1f5f9' }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem', borderBottom: '1px solid #f1f5f9', paddingBottom: '1rem' }}>
