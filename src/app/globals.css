@@ -31,7 +31,7 @@ html {
 
   --color-text-primary: #161616;
   /* IBM Carbon - Primary Text */
-  --color-text-secondary: #525252;
+  --color-text-secondary: #393939;
   /* Secondary Text */
   --color-text-tertiary: #8d8d8d;
   /* Tertiary Text */
@@ -139,14 +139,9 @@ strong,
 b,
 button {
   font-family: var(--font-primary);
-  font-weight: 300 !important;
   line-height: 1.25;
   color: var(--color-text-primary);
   margin-bottom: var(--space-06);
-}
-
-* {
-  font-weight: 300 !important;
 }
 
 h1 {

@@ -28,17 +28,17 @@ export default function Home() {
   return (
     <>
       {/* Structured Data for SEO */}
-      <Script
+      <script
         id="faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Script
+      <script
         id="website-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
-      <Script
+      <script
         id="speakable-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema("https://nethoreca.pl", ["#faq-section"])) }}

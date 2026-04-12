@@ -8,11 +8,17 @@ import { organizationSchema, localBusinessSchema } from "@/lib/structured-data";
 // Optimized font loading - subset and swap for faster rendering
 const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin", "latin-ext"],
-  weight: ["300"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
   preload: true,
   variable: "--font-ibm",
 });
+
+export const viewport: import("next").Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nethoreca.pl'),

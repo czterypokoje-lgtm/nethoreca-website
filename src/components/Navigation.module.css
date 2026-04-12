@@ -176,7 +176,7 @@
 
 /* ── Mobile Menu Overlay ── */
 .mobileMenu {
-    display: none;
+    visibility: hidden;
     position: fixed;
     top: 0;
     left: 0;
@@ -186,13 +186,13 @@
     z-index: var(--z-modal); /* Increased from z-sticky - 1 */
     overflow-y: auto;
     transform: translateX(-100%);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, visibility 0.3s ease;
     padding-top: 80px; /* space for the sticky nav bar */
 }
 
 .mobileMenuOpen {
-    display: block !important;
-    transform: translateX(0);
+    visibility: visible !important;
+    transform: translateX(0) !important;
 }
 
 .mobileMenuInner {
@@ -326,7 +326,9 @@
 
 /* ── Backdrop ── */
 .mobileBackdrop {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.4);
@@ -334,7 +336,8 @@
 }
 
 .mobileBackdropOpen {
-    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 /* ── Responsive Breakpoints ── */

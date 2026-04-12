@@ -43,7 +43,7 @@ const textileCategories = [
         id: 'reczniki',
         title: 'Ręczniki Hotelowe',
         description: 'Puszyste i chłonne ręczniki frotte, które zachwycą Twoich gości. Wyjątkowa trwałość dzięki podwójnym obszyciom.',
-        image: '/products/reczniki-hotelowe-frotte-komplet.webp',
+        image: '/products/1706891045_69dabd303f5ae4fa84cad912ed9de833.jpeg',
         features: ['Gramatura 400-650 g/m²', '100% Bawełna Egejska', 'Wzmocnione brzegi'],
         link: '/tekstylia-hotelowe/reczniki'
     },

@@ -20,11 +20,10 @@ const navItems = [
         label: 'Chemia Ecolab',
         href: '/chemia-ecolab',
         sub: [
-            { label: 'Pralnia (ECOBRITE)', href: '/chemia-ecolab/pralnia' },
-            { label: 'Środki Czyszczące', href: '/chemia-ecolab/czyszczenie' },
+            { label: 'Pralnia (ECOBRITE)', href: '/chemia-ecolab/pielegnacja-tkanin' },
+            { label: 'Środki Czyszczące', href: '/chemia-ecolab/srodki-czyszczace' },
             { label: 'Dezynfekcja', href: '/chemia-ecolab/dezynfekcja' },
-            { label: 'Higiena Kuchni', href: '/chemia-ecolab/kuchnia' },
-            { label: 'Pielęgnacja Podłóg', href: '/chemia-ecolab/podlogi' },
+            { label: 'Higiena Kuchni', href: '/chemia-ecolab/higiena-kuchni' },
         ],
     },
     {

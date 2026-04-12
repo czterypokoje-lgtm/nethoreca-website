@@ -10,6 +10,7 @@ import LaundryFAQ from '@/components/laundry/LaundryFAQ';
 import ReferenceSection from '@/components/sections/ReferenceSection';
 import TeamContactCTA from '@/components/shared/TeamContactCTA';
 import { teamMembers } from '@/lib/trust-signals';
+import { createPageMetadata } from '@/lib/seo-metadata';
 import styles from './page.module.css';
 
 export const metadata: Metadata = createPageMetadata({
