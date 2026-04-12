@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from '@carbon/icons-react';
+import styles from '@/app/pralnia-dla-hoteli/pralnia.module.css';
 
 const faqs = [
     {
@@ -30,37 +31,27 @@ export default function LaundryFAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
-        <section style={{ padding: '6rem 0', background: '#f8fafc' }}>
-            <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0 2rem' }}>
-                <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: '#0f172a', marginBottom: '1rem' }}>
+        <section className={styles.faqSection}>
+            <div className={styles.container} style={{ maxWidth: '800px' }}>
+                <div className={styles.sectionHeader}>
+                    <h2 className={styles.sectionTitle}>
                         Częste Pytania (FAQ)
                     </h2>
                 </div>
 
-                <div style={{ display: 'grid', gap: '1rem' }}>
+                <div className={styles.faqList}>
                     {faqs.map((faq, idx) => (
-                        <div key={idx} style={{ background: 'white', borderRadius: '12px', overflow: 'hidden', border: '1px solid #e2e8f0' }}>
+                        <div key={idx} className={styles.faqItem}>
                             <button
                                 onClick={() => setOpenIndex(idx === openIndex ? null : idx)}
-                                style={{
-                                    width: '100%',
-                                    padding: '1.5rem',
-                                    background: 'none',
-                                    border: 'none',
-                                    display: 'flex',
-                                    justifyContent: 'space-between',
-                                    alignItems: 'center',
-                                    cursor: 'pointer',
-                                    textAlign: 'left'
-                                }}
+                                className={styles.faqButton}
                             >
-                                <span style={{ fontSize: '1.125rem', fontWeight: 700, color: '#0f172a' }}>{faq.q}</span>
+                                <span className={styles.faqQuestion}>{faq.q}</span>
                                 {idx === openIndex ? <ChevronUp /> : <ChevronDown />}
                             </button>
 
                             {idx === openIndex && (
-                                <div style={{ padding: '0 1.5rem 1.5rem 1.5rem', color: '#475569', lineHeight: 1.6 }}>
+                                <div className={styles.faqAnswer}>
                                     {faq.a}
                                 </div>
                             )}

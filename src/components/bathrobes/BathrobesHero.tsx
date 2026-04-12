@@ -2,8 +2,8 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from '@/app/tekstylia-hotelowe/posciel/page.module.css';
 import { Checkmark, Star, Certificate, Hotel } from '@carbon/icons-react';
+import styles from '@/app/tekstylia-hotelowe/szlafroki/szlafroki.module.css';
 
 export default function BathrobesHero() {
     return (
@@ -15,9 +15,9 @@ export default function BathrobesHero() {
                             <Certificate size={16} />
                             KOLEKCJA NETHORECA SPA & WELLNESS
                         </div>
-                        <h1 className={styles.heroTitle} style={{ color: '#ffffff' }}>
+                        <h1 className={styles.heroTitle}>
                             Profesjonalne <br />
-                            <span className={styles.highlight} style={{ color: '#6dc7b8' }}>Szlafroki Hotelowe</span>
+                            <span className={styles.highlight}>Szlafroki Hotelowe</span>
                         </h1>
                         <p className={styles.heroSubtitle}>
                             Otul swoich gości miękkością. Oferujemy szlafroki welurowe Premium
@@ -52,14 +52,13 @@ export default function BathrobesHero() {
                             <Image
                                 src="/images/szlafroki/szlafroki-hero.webp"
                                 alt="Profesjonalny szlafrok obiektowy NetHoreca"
-                                width={600}
-                                height={800}
+                                fill
                                 priority
                                 style={{ objectFit: 'cover' }}
                             />
                         </div>
                         {/* Floating Feature Card */}
-                        <div className={styles.floatingCard} style={{ background: '#ffffff', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
+                        <div className={styles.floatingCard}>
                             <Certificate size={32} style={{ color: '#004b87' }} />
                             <div>
                                 <strong style={{ color: '#0f172a', display: 'block' }}>Welurowa Miękkość</strong>

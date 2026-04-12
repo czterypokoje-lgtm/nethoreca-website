@@ -63,14 +63,13 @@ export default function Home() {
             </div>
 
             {/* Right Column - Hero Image */}
-            <div className={styles.heroVisual} style={{ minHeight: '400px', height: '100%', position: 'relative', width: '100%' }}>
+            <div className={styles.heroVisual}>
               <Image
                 src="/images/home/logistyka-serwis.jpg"
                 alt="Pracownik serwisu logistycznego z zapasem czystych, najwyższej jakości ręczników hotelowych"
                 fill
                 priority
                 className={styles.heroImage}
-                style={{ objectFit: 'contain', objectPosition: 'center center' }}
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
@@ -209,7 +208,7 @@ export default function Home() {
                     alt="Selpak Professional - produkty papierowe dla hoteli"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    style={{ objectFit: 'cover' }}
+                    className={styles.objectCover}
                   />
                 </div>
                 <div className={styles.categoryContent}>
@@ -234,7 +233,7 @@ export default function Home() {
             <div className={styles.laundryGrid}>
               <div className={styles.laundryContent}>
                 <span className={styles.laundryLabel}>
-                  <span className={styles.labelDot} style={{ background: '#38bdf8' }}></span>
+                  <span className={styles.labelDotPrimary}></span>
                   Nowy Pion Usług
                 </span>
                 <h2 className={styles.laundryTitle}>
@@ -276,7 +275,7 @@ export default function Home() {
                   src="/images/pralnia-dla-hoteli-przemyslowa.webp"
                   alt="Pralnia przemysłowa dla hoteli - Nethoreca Hub"
                   fill
-                  style={{ objectFit: 'cover' }}
+                  className={styles.objectCover}
                 />
               </div>
             </div>

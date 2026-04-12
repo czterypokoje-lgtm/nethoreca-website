@@ -1,28 +1,28 @@
 'use client';
 
 import { CheckmarkFilled, CloseFilled } from '@carbon/icons-react';
-import styles from '../../app/page.module.css'; // Reusing global styles for simplicity
+import styles from '@/app/pralnia-dla-hoteli/pralnia.module.css';
 
 export default function RentVsBuyLaundry() {
     return (
-        <section className={styles.comparisonSection} style={{ padding: '6rem 0', background: 'white' }}>
+        <section className={styles.comparisonSection}>
             <div className={styles.container}>
-                <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: '#0f172a', marginBottom: '1rem' }}>
+                <div className={styles.sectionHeader}>
+                    <h2 className={styles.sectionTitle}>
                         Własna Pralnia vs Nethoreca HUB
                     </h2>
-                    <p style={{ fontSize: '1.25rem', color: '#64748b' }}>
+                    <p className={styles.sectionDesc}>
                         Dlaczego coraz więcej hoteli rezygnuje z własnej pralni?
                     </p>
                 </div>
 
-                <div className={styles.comparisonTableWrapper} style={{ overflowX: 'auto', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)', borderRadius: '16px' }}>
-                    <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: '800px' }}>
+                <div className={styles.comparisonWrapper}>
+                    <table className={styles.comparisonTable}>
                         <thead>
                             <tr style={{ background: '#f8fafc' }}>
-                                <th style={{ padding: '1.5rem', textAlign: 'left', color: '#64748b', fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Kryterium</th>
-                                <th style={{ padding: '1.5rem', textAlign: 'left', color: '#ef4444', fontSize: '1.125rem', fontWeight: 800 }}>Własna Pralnia</th>
-                                <th style={{ padding: '1.5rem', textAlign: 'left', color: '#3b82f6', fontSize: '1.125rem', fontWeight: 800 }}>Nethoreca HUB (Outsourcing)</th>
+                                <th style={{ textAlign: 'left', color: '#64748b', fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Kryterium</th>
+                                <th style={{ textAlign: 'left', color: '#ef4444', fontSize: '1.125rem', fontWeight: 800 }}>Własna Pralnia</th>
+                                <th style={{ textAlign: 'left', color: '#3b82f6', fontSize: '1.125rem', fontWeight: 800 }}>Nethoreca HUB (Outsourcing)</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -77,8 +77,8 @@ export default function RentVsBuyLaundry() {
                                 }
                             ].map((row, idx) => (
                                 <tr key={idx} style={{ borderBottom: '1px solid #f1f5f9' }}>
-                                    <td style={{ padding: '1.5rem', fontWeight: 600, color: '#0f172a' }}>{row.feature}</td>
-                                    <td style={{ padding: '1.5rem', background: '#fef2f2' }}>
+                                    <td style={{ fontWeight: 600, color: '#0f172a' }}>{row.feature}</td>
+                                    <td style={{ background: '#fef2f2' }}>
                                         <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
                                             <CloseFilled color="#ef4444" size={20} style={{ minWidth: '20px' }} />
                                             <div>
@@ -87,7 +87,7 @@ export default function RentVsBuyLaundry() {
                                             </div>
                                         </div>
                                     </td>
-                                    <td style={{ padding: '1.5rem', background: '#eff6ff' }}>
+                                    <td style={{ background: '#eff6ff' }}>
                                         <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
                                             <CheckmarkFilled color="#3b82f6" size={20} style={{ minWidth: '20px' }} />
                                             <div>
@@ -102,7 +102,7 @@ export default function RentVsBuyLaundry() {
                     </table>
                 </div>
 
-                <div className={styles.caseSnippet} style={{ marginTop: '3rem', padding: '2rem', background: '#1e293b', borderRadius: '16px', color: 'white', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '2rem' }}>
+                <div className={styles.caseSnippet}>
                     <div>
                         <h4 style={{ margin: 0, fontSize: '1.25rem', color: '#94a3b8' }}>Realny Przykład (Hotel 80 pokoi):</h4>
                         <div style={{ fontSize: '2rem', fontWeight: 800, marginTop: '0.5rem' }}>

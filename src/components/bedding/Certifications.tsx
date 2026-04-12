@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import styles from '../../app/tekstylia-hotelowe/posciel/page.module.css';
+import styles from '@/app/tekstylia-hotelowe/posciel/posciel.module.css';
 
 export default function Certifications() {
     return (
@@ -13,10 +13,10 @@ export default function Certifications() {
                     </h2>
                 </div>
 
-                <div className={styles.certGrid} style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
+                <div className={styles.certGrid}>
 
                     {/* OEKO-TEX */}
-                    <div className={styles.certCard} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+                    <div className={styles.certCard}>
                         <div style={{ position: 'relative', width: '120px', height: '120px', marginBottom: '1.5rem' }}>
                             <Image
                                 src="/images/certificates/oeko-tex.svg"
@@ -30,7 +30,7 @@ export default function Certifications() {
                     </div>
 
                     {/* EU ECOLABEL */}
-                    <div className={styles.certCard} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+                    <div className={styles.certCard}>
                         <div style={{ position: 'relative', width: '120px', height: '120px', marginBottom: '1.5rem' }}>
                             <Image
                                 src="/images/certificates/eu-ecolabel.svg"
@@ -44,7 +44,7 @@ export default function Certifications() {
                     </div>
 
                     {/* ISO 9001 */}
-                    <div className={styles.certCard} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+                    <div className={styles.certCard}>
                         <div style={{ position: 'relative', width: '120px', height: '120px', marginBottom: '1.5rem' }}>
                             <Image
                                 src="/images/certificates/iso-9001.svg"
@@ -58,7 +58,7 @@ export default function Certifications() {
                     </div>
 
                     {/* REACH COMPLIANCE */}
-                    <div className={styles.certCard} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+                    <div className={styles.certCard}>
                         <div style={{ position: 'relative', width: '120px', height: '120px', marginBottom: '1.5rem' }}>
                             <Image
                                 src="/images/certificates/reach.svg"

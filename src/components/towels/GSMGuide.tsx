@@ -1,7 +1,7 @@
 'use client';
 
 import { Ruler } from '@carbon/icons-react';
-import styles from '../../app/tekstylia-hotelowe/posciel/page.module.css';
+import styles from '@/app/tekstylia-hotelowe/reczniki/reczniki.module.css';
 
 export default function GSMGuide() {
     return (
@@ -16,7 +16,7 @@ export default function GSMGuide() {
                     </p>
                 </div>
 
-                <div className={styles.sizeTableWrapper} style={{ overflowX: 'auto', marginBottom: '3rem' }}>
+                <div className={styles.sizeTableWrapper}>
                     <table className={styles.sizeTable}>
                         <thead>
                             <tr>
@@ -55,30 +55,30 @@ export default function GSMGuide() {
                     </table>
                 </div>
 
-                <div className={styles.measurementGuide} style={{ background: '#eef5ff', border: '1px solid #cce0ff', borderRadius: '12px', padding: '2rem', textAlign: 'center' }}>
-                    <h3 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', color: '#004b87', marginBottom: '1.5rem' }}>
+                <div className={styles.measurementGuide}>
+                    <h3 className={styles.measurementTitle}>
                         <Ruler size={24} /> Standardowe Rozmiary
                     </h3>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2rem' }}>
-                        <div>
+                    <div className={styles.measurementGrid}>
+                        <div className={styles.measurementItem}>
                             <strong>Ręczniczek do rąk</strong><br />
-                            <span style={{ color: '#64748b' }}>30x50 cm</span>
+                            <span>30x50 cm</span>
                         </div>
-                        <div>
+                        <div className={styles.measurementItem}>
                             <strong>Ręcznik do twarzy</strong><br />
-                            <span style={{ color: '#64748b' }}>50x100 cm</span>
+                            <span>50x100 cm</span>
                         </div>
-                        <div>
+                        <div className={styles.measurementItem}>
                             <strong>Ręcznik kąpielowy</strong><br />
-                            <span style={{ color: '#64748b' }}>70x140 cm</span>
+                            <span>70x140 cm</span>
                         </div>
-                        <div>
+                        <div className={styles.measurementItem}>
                             <strong>Ręcznik SPA / Plażowy</strong><br />
-                            <span style={{ color: '#64748b' }}>100x150 cm</span>
+                            <span>100x150 cm</span>
                         </div>
-                        <div>
+                        <div className={styles.measurementItem}>
                             <strong>Stopka hotelowa</strong><br />
-                            <span style={{ color: '#64748b' }}>50x70 cm (700 GSM)</span>
+                            <span>50x70 cm (700 GSM)</span>
                         </div>
                     </div>
                 </div>

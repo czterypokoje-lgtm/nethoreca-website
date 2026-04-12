@@ -133,7 +133,6 @@ export default function TextilesPage() {
                                     height={450}
                                     priority
                                     className={styles.heroImage}
-                                    style={{ objectFit: 'cover' }}
                                 />
                             </div>
                             <div className={styles.floatingCard}>
@@ -156,10 +155,10 @@ export default function TextilesPage() {
                             <span className={styles.labelDot}></span>
                             Dlaczego NetHoreca?
                         </span>
-                        <h2 className={styles.aboutTitle} style={{ textAlign: 'center' }}>
+                        <h2 className={styles.aboutTitle}>
                             Jakość, którą poczują Twoi goście
                         </h2>
-                        <p className={styles.aboutText} style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto' }}>
+                        <p className={styles.aboutText}>
                             Nasze tekstylia są projektowane z myślą o intensywnym użytkowaniu w hotelach.
                             Gwarantujemy zachowanie parametrów nawet po wielokrotnym praniu przemysłowym.
                         </p>
@@ -206,7 +205,7 @@ export default function TextilesPage() {
                             <span className={styles.labelDot}></span>
                             Nasze Kolekcje
                         </span>
-                        <h2 className={styles.aboutTitle} style={{ textAlign: 'center' }}>
+                        <h2 className={styles.aboutTitle}>
                             Kompleksowe wyposażenie tekstylne
                         </h2>
                     </div>

@@ -183,7 +183,7 @@
     width: 100%;
     height: 100%;
     background: #fff;
-    z-index: calc(var(--z-sticky) - 1);
+    z-index: var(--z-modal); /* Increased from z-sticky - 1 */
     overflow-y: auto;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
@@ -191,7 +191,7 @@
 }
 
 .mobileMenuOpen {
-    display: block;
+    display: block !important;
     transform: translateX(0);
 }
 
@@ -330,7 +330,11 @@
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.4);
-    z-index: calc(var(--z-sticky) - 2);
+    z-index: calc(var(--z-modal) - 1);
+}
+
+.mobileBackdropOpen {
+    display: block !important;
 }
 
 /* ── Responsive Breakpoints ── */

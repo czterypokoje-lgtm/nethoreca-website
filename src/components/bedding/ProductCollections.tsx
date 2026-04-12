@@ -2,7 +2,7 @@
 
 import { CheckmarkFilled, TemperatureHot, Scales, Rule } from '@carbon/icons-react';
 import Image from 'next/image';
-import styles from '../../app/tekstylia-hotelowe/posciel/page.module.css';
+import styles from '@/app/tekstylia-hotelowe/posciel/posciel.module.css';
 
 const collections = [
     {
@@ -103,29 +103,16 @@ export default function ProductCollections() {
                 <div className={styles.collectionsGrid}>
                     {collections.map((col) => (
                         <div key={col.id} className={styles.collectionCard}>
-                            <div className={styles.placeholderImage} style={{ display: 'block', height: 'auto', position: 'relative' }}>
+                            <div className={styles.placeholderImage}>
                                 <Image
                                     src={col.image}
                                     alt={col.title}
-                                    width={400}
-                                    height={300}
-                                    style={{
-                                        width: '100%',
-                                        height: '240px',
-                                        objectFit: 'cover',
-                                        display: 'block'
-                                    }}
+                                    fill
+                                    className={styles.collectionImage}
+                                    style={{ objectFit: 'cover' }}
                                 />
-                                <div style={{
-                                    position: 'absolute',
-                                    bottom: 0,
-                                    left: 0,
-                                    right: 0,
-                                    background: 'linear-gradient(to top, rgba(0,0,0,0.7), transparent)',
-                                    padding: '20px 20px 10px',
-                                    color: 'white'
-                                }}>
-                                    <span style={{ fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', opacity: 0.9 }}>
+                                <div className={styles.cardOverlay}>
+                                    <span className={styles.cardSubtitle}>
                                         {col.subtitle}
                                     </span>
                                 </div>
@@ -134,21 +121,21 @@ export default function ProductCollections() {
                             <div className={styles.cardContent}>
                                 <h3 className={styles.cardTitle}>{col.title}</h3>
 
-                                <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '0.875rem', color: '#616061' }}>
-                                    <li style={{ marginBottom: '8px', display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
-                                        <CheckmarkFilled size={16} color="#004b87" style={{ flexShrink: 0, marginTop: '2px' }} />
+                                <ul className={styles.cardDetailsList}>
+                                    <li>
+                                        <CheckmarkFilled size={16} />
                                         <span><strong>Skład:</strong> {col.details.composition}</span>
                                     </li>
-                                    <li style={{ marginBottom: '8px', display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
-                                        <Scales size={16} color="#004b87" style={{ flexShrink: 0, marginTop: '2px' }} />
+                                    <li>
+                                        <Scales size={16} />
                                         <span><strong>Gramatura:</strong> {col.details.weight}</span>
                                     </li>
-                                    <li style={{ marginBottom: '8px', display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
-                                        <Rule size={16} color="#004b87" style={{ flexShrink: 0, marginTop: '2px' }} />
+                                    <li>
+                                        <Rule size={16} />
                                         <span><strong>Wykończenie:</strong> {col.details.finish}</span>
                                     </li>
-                                    <li style={{ marginBottom: '0', display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
-                                        <TemperatureHot size={16} color="#004b87" style={{ flexShrink: 0, marginTop: '2px' }} />
+                                    <li>
+                                        <TemperatureHot size={16} />
                                         <span>{col.details.wash}</span>
                                     </li>
                                 </ul>
@@ -157,11 +144,11 @@ export default function ProductCollections() {
                     ))}
                 </div>
 
-                <div style={{ textAlign: 'center' }}>
-                    <a href="/Katalog_NetHoreca_2025.pdf" download className={styles.btnPrimary} style={{ textDecoration: 'none' }}>
+                <div className={styles.catalogFooter}>
+                    <a href="/Katalog_NetHoreca_2025.pdf" download className={styles.btnPrimary}>
                         Pobierz Katalog PDF (2025)
                     </a>
-                    <p style={{ marginTop: '1rem', fontSize: '0.875rem', color: '#616061' }}>
+                    <p className={styles.footerNote}>
                         Dostępne certyfikaty: Oeko-Tex Standard 100, ISO 9001
                     </p>
                 </div>

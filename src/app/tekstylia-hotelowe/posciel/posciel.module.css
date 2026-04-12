@@ -1,0 +1,206 @@
+/* Bedding Specific Styles */
+
+.main {
+    --brand-blue: #004b87;
+    --brand-teal: #6dc7b8;
+    --text-primary: #1d1c1d;
+    --text-secondary: #616061;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Common Section Styles */
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.sectionLabel {
+    display: inline-block;
+    color: var(--brand-teal);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.sectionDesc {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+/* Certifications Section */
+.certSection {
+    padding: 6rem 0;
+    background: #f8fafc;
+}
+
+.certGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 3rem;
+}
+
+.certCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.certCard h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #0f172a;
+}
+
+.certCard p {
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+}
+
+/* Product Collections Section */
+.collectionsSection {
+    padding: 6rem 0;
+}
+
+.collectionsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.collectionCard {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+}
+
+.collectionCard:hover {
+    transform: translateY(-5px);
+}
+
+.placeholderImage {
+    position: relative;
+    height: 240px;
+    background: #f1f5f9;
+}
+
+.cardContent {
+    padding: 1.5rem;
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #0f172a;
+}
+
+/* Technical Specs Section */
+.specsSection {
+    padding: 6rem 0;
+    background: #0f172a;
+    color: white;
+}
+
+.specsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (max-width: 1024px) {
+    .specsGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.specsList {
+    list-style: none;
+    padding: 0;
+}
+
+.specsList li {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.specIcon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Final CTA Section */
+.finalCtaSection {
+    padding: 8rem 0;
+    background: linear-gradient(135deg, #001e40 0%, #004b87 100%);
+    color: white;
+    text-align: center;
+}
+
+.btnPrimary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #6dc7b8;
+    color: #001e40;
+    padding: 1.25rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.125rem;
+    transition: all 0.3s ease;
+}
+
+.btnSecondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    padding: 1.25rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.125rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 640px) {
+    .sectionTitle {
+        font-size: 2rem;
+    }
+    
+    .certGrid, .collectionsGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .btnPrimary, .btnSecondary {
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -9,7 +9,7 @@ import TrustBar from '@/components/shared/TrustBar';
 import ProductSchema from '@/components/shared/ProductSchema';
 import TeamContactCTA from '@/components/shared/TeamContactCTA';
 import { teamMembers } from '@/lib/trust-signals';
-import styles from '@/app/tekstylia-hotelowe/posciel/page.module.css';
+import styles from '@/app/tekstylia-hotelowe/szlafroki/szlafroki.module.css';
 import { createPageMetadata } from '@/lib/seo-metadata';
 
 export const metadata: Metadata = createPageMetadata({

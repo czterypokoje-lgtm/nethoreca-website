@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { CheckmarkFilled, Calculator, Catalog, StarFilled, Enterprise, TaskComplete, Partnership } from '@carbon/icons-react';
-import styles from '../../app/tekstylia-hotelowe/posciel/page.module.css';
+import styles from '@/app/tekstylia-hotelowe/reczniki/reczniki.module.css';
 
 export default function TowelsHero() {
     return (
@@ -15,7 +15,7 @@ export default function TowelsHero() {
                             <StarFilled size={16} color="#ffd700" />
                             Wynajem i Sprzedaż
                         </div>
-                        <h1 className={styles.heroTitle} style={{ color: '#ffffff' }}>
+                        <h1 className={styles.heroTitle}>
                             Ręczniki Hotelowe <br />
                             <span className={styles.highlight}>Miękkość i Trwałość</span>
                         </h1>
@@ -59,18 +59,12 @@ export default function TowelsHero() {
                                 alt="Puszyste ręczniki hotelowe premium"
                                 width={600}
                                 height={500}
-                                style={{
-                                    width: '100%',
-                                    height: 'auto',
-                                    display: 'block',
-                                    objectFit: 'cover',
-                                    borderRadius: '1rem'
-                                }}
+                                className={styles.heroImage}
                                 priority
                             />
                         </div>
                         <div className={styles.floatingCard}>
-                            <div style={{ background: '#e0f2ff', padding: '0.75rem', borderRadius: '50%' }}>
+                            <div style={{ background: '#e0f2ff', padding: '0.75rem', borderRadius: '50%', display: 'flex' }}>
                                 <CheckmarkFilled size={24} color="#004b87" />
                             </div>
                             <div>

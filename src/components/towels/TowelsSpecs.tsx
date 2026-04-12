@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { CheckmarkFilled, Warning } from '@carbon/icons-react';
-import styles from '../../app/tekstylia-hotelowe/posciel/page.module.css';
+import styles from '@/app/tekstylia-hotelowe/reczniki/reczniki.module.css';
 
 export default function TowelsSpecs() {
     return (
@@ -57,17 +57,15 @@ export default function TowelsSpecs() {
                         </ul>
                     </div>
                     <div className={styles.specsVisual}>
-                        <Image
-                            src="/images/towels/texture-macro.webp"
-                            alt="Zbliżenie na splot pętelkowy (Ring Spun)"
-                            width={500}
-                            height={600}
-                            style={{
-                                width: '100%',
-                                height: '100%',
-                                objectFit: 'cover'
-                            }}
-                        />
+                        <div className={styles.specsImageWrapper}>
+                            <Image
+                                src="/images/towels/texture-macro.webp"
+                                alt="Zbliżenie na splot pętelkowy (Ring Spun)"
+                                fill
+                                className={styles.specsImage}
+                                style={{ objectFit: 'cover' }}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

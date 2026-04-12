@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, CheckmarkFilled, Catalog as CatalogIcon } from '@carbon/icons-react';
-import styles from '../../app/tekstylia-hotelowe/posciel/page.module.css';
+import styles from '@/app/tekstylia-hotelowe/reczniki/reczniki.module.css';
 
 const collections = [
     {
@@ -44,11 +44,12 @@ export default function TowelsCollections() {
                 <div className={styles.collectionsGrid}>
                     {collections.map((col) => (
                         <div key={col.id} className={styles.collectionCard}>
-                            <div className={styles.cardImageWrapper} style={{ height: '240px', position: 'relative' }}>
+                            <div className={styles.cardImageWrapper}>
                                 <Image
                                     src={col.image}
                                     alt={col.name}
                                     fill
+                                    className={styles.cardImage}
                                     style={{ objectFit: 'cover' }}
                                 />
                                 <span className={styles.cardTag}>{col.tag}</span>
@@ -65,7 +66,7 @@ export default function TowelsCollections() {
                                         </li>
                                     ))}
                                 </ul>
-                                <Link href="/zapytanie-ofertowe" className={styles.btnOutline} style={{ width: '100%', justifyContent: 'center' }}>
+                                <Link href="/zapytanie-ofertowe" className={styles.btnOutline} style={{ width: '100%', justifyContent: 'center', display: 'flex', textDecoration: 'none' }}>
                                     Zobacz {col.name} <ArrowRight size={16} />
                                 </Link>
                             </div>

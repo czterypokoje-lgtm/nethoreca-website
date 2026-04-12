@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { Calculator, ArrowRight } from '@carbon/icons-react';
-import styles from '../../app/tekstylia-hotelowe/posciel/page.module.css';
+import styles from '@/app/tekstylia-hotelowe/reczniki/reczniki.module.css';
 
 export default function TowelsCalculator() {
     const [rooms, setRooms] = useState(50);
@@ -124,7 +124,7 @@ export default function TowelsCalculator() {
                                 Zamów Audyt Frotte <ArrowRight size={16} />
                             </button>
 
-                            <p className={styles.disclaimer} style={{ color: 'rgba(255,255,255,0.6)', marginTop: '1rem', textAlign: 'center' }}>
+                            <p className={styles.disclaimer}>
                                 *Szacunek dla zestawu 3 ręczników/pokój
                             </p>
                         </div>

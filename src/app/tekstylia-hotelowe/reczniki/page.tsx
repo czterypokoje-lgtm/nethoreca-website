@@ -10,7 +10,7 @@ import ProductFAQ from '@/components/shared/ProductFAQ';
 import ProductCTA from '@/components/shared/ProductCTA';
 import TeamContactCTA from '@/components/shared/TeamContactCTA';
 import { teamMembers } from '@/lib/trust-signals';
-import styles from '@/app/tekstylia-hotelowe/posciel/page.module.css';
+import styles from './reczniki.module.css';
 import { createPageMetadata } from '@/lib/seo-metadata';
 
 export const metadata: Metadata = createPageMetadata({

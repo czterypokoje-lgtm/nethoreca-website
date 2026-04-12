@@ -1,0 +1,173 @@
+.heroSection {
+    padding: 3rem 0 2rem;
+    background: linear-gradient(135deg, #001e40 0%, #004b87 50%, #002d5c 100%);
+    color: white !important;
+    overflow: hidden;
+    position: relative;
+}
+
+@media (min-width: 1024px) {
+    .heroSection {
+        padding: 6rem 0 5rem;
+    }
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.heroGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .heroGrid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+}
+
+.heroContent {
+    z-index: 2;
+}
+
+.heroTitle {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: #ffffff !important;
+}
+
+.heroSubtitle {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.heroButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.trustPoints {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.point {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: white;
+}
+
+.heroVisual {
+    position: relative;
+    width: 100%;
+}
+
+.heroImageWrapper {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    border: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+.heroImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.floatingCard {
+    position: absolute;
+    bottom: 20px;
+    left: -20px;
+    background: white;
+    padding: 1.25rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 240px;
+}
+
+@media (max-width: 640px) {
+    .floatingCard {
+        display: none;
+    }
+}
+
+/* Collections section */
+.collectionsSection {
+    padding: 4rem 0;
+    background: #f8fafc;
+}
+
+.collectionsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.collectionCard {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.collectionCard:hover {
+    transform: translateY(-8px);
+}
+
+.cardImageWrapper {
+    position: relative;
+    height: 240px;
+}
+
+.cardContent {
+    padding: 2rem;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1rem;
+}
+
+.cardHeader h3 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.cardFeatures {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+}
+
+.cardFeatures li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    color: #475569;
+}
